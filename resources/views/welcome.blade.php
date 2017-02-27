@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
+        <!-- Optional theme -->
+        <title>Kalolsavam 2k17 </title>
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -79,15 +80,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                  Kalolsavam <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>2k17
                 </div>
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/PSNAppZ">GitHub</a>
                 </div>
             </div>
         </div>
