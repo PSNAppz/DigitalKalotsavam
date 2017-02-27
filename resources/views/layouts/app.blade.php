@@ -59,6 +59,18 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                  <li>
+                                      <a href="{{ route('home') }}">
+                                          Home
+                                      </a>
+                                  </li>
+                                  <li>
+                                      @if (Auth::User()->role==2)
+                                      <a href="{{ route('admin') }}">
+                                          Admin Dashboard
+                                      </a>
+                                      @endif
+                                  </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
