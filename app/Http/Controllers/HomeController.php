@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show the Team Management Page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function manage()
+    {
+        return view('manage');
+    }
 }
