@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Digital Kalolsavam') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
@@ -55,19 +56,19 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    <i class="fa fa-id-badge" aria-hidden="true"></i> {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
                                   <li>
                                       <a href="{{ route('home') }}">
-                                          Home
+                                          <i class="fa fa-h-square" aria-hidden="true"></i> Home
                                       </a>
                                   </li>
                                   <li>
                                       @if (Auth::User()->role==2)
                                       <a href="{{ route('admin') }}">
-                                          Admin Dashboard
+                                         <i class="fa fa-tachometer" aria-hidden="true"></i> Admin Dashboard
                                       </a>
                                       @endif
                                   </li>
@@ -75,7 +76,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -94,6 +95,5 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
