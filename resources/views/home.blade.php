@@ -5,22 +5,17 @@
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Dashboard - {TEAM NAME}</div>
                 <div class="panel-body">
                   <div class="row">
-                    <div class="col-xs-6 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span><br>Edit Profile</h1></center>
+                    <div class="col-xs-12 col-md-6" >
+                      <a href="/manage" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#09b83e;"><span class="glyphicon glyphicon-user" aria-hidden="true" ></span><br>View Team Registration</h1></center>
                       </a>
                     </div>
-                    <div class="col-xs-6 col-md-3">
+                    <div class="col-xs-12 col-md-6">
                       <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><br>View Events</h1></center>
-                      </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><br>My Events</h1></center>
+                        <center><h1 style="color:#09b83e;"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><br>View Events</h1></center>
                       </a>
                     </div>
                   </div>
@@ -29,7 +24,15 @@
         </div>
         <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
-                <div class="panel-heading">Notifications <span class="badge">4</span></div>
+                <div class="panel-heading">Score Board - {TEAM NAME}<span class="badge"></span></div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-md-offset-0">
+            <div class="panel panel-default">
+                <div class="panel-heading">Announcements<span class="badge"></span></div>
                 <div class="panel-body">
 
                 </div>
@@ -37,7 +40,7 @@
         </div>
       </div>
 
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
@@ -52,6 +55,8 @@
             </div>
           </div>
         </div>
-      </div>
+    </div> -->
+
 </div>
 @endsection
+<script src="{{ asset('js/app.js') }}"></script>
