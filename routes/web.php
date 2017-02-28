@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['except' => ['register']]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
