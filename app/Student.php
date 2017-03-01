@@ -17,4 +17,5 @@ class Student extends Model
   *
   */
   protected $primaryKey = 'rollno';
+  public $incrementing = false;
 }

@@ -16,9 +16,9 @@
         )
     </script>
 
-<div class="container">
+<div class="container" style="width:95%;">
     <div class="row">
-        <div class="col-md-12 col-md-offset-0">
+        <div class="col-md-14 col-md-offset-0">
             <div class="panel panel-default">
                 <div class="panel-heading">View Team Registration</div>
                 <div class="panel-body">
@@ -30,25 +30,46 @@
                                 <th>Name</th>
                                 <th>Rollno</th>
                                 <th>Email</th>
-                                <th>Item 1</th>
-                                <th>Item 2</th>
-                                <th>Item 3</th>
-                                <th>Item 4</th>
-                                
+                                <th>Classical dance boys</th>
+                                <th>Classical dance girls</th>
+                                <th>Semi classical dance boys</th>
+                                <th>Semi classical dance girls</th>
+
+                                <th>Total Events</th>
+
                               </tr>
                             </thead>
                             <tbody>
                                 <!-- Foreach -->
+                                @foreach($stud as $s)
+                                    @php $total=0; @endphp
                                     <tr>
+                                    <th>{{$s->name}}</th>
+                                    <th>{{$s->rollno}}</th>
+                                    <th>{{$s->email}}</th>
+                                    <th>@if ($s->classical_dance_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
 
-                                        <th>{ $vo}</th>
-                                        <th>{ $vo}}</th>
-                                        <th>{$vo}}</th>
-                                    <th>{$vo}}</th>
-                                    <th>{ $v}}</th>
-                                    <th>{ $vo}}</th>
-                                    <th>{ $vo}}</th>
+                                    <th>@if ($s->classical_dance_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->semi_classical_dance_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->semi_classical_dance_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@php echo $total; @endphp</th>
                                     </tr>
+                                @endforeach
                                     <!-- End -->
                           </tbody>
                           </table>
@@ -57,23 +78,5 @@
             </div>
         </div>
       </div>
-
-        <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Contact Admin
-              </a>
-            </h4>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              Contact Admin
-            </div>
-          </div>
-        </div>
-    </div> -->
-
 </div>
 @endsection

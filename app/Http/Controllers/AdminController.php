@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Support;
 
 class AdminController extends Controller
 {
     public function __construct()
     {
+        $this->middleware('auth');
         $this->middleware('admin');
     }
     /**
@@ -17,7 +19,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-      return view('Admin.home');
+      $sup = Support::where('replied','0')->orderBy('id','desc')->get();
+      return view('Admin.home')->withSup($sup);
     }
 
     /**
@@ -61,6 +64,21 @@ class AdminController extends Controller
     public function edit($id)
     {
         //
+    }
+
+    public function reply(Request $request,$id){
+     $sup = Support::findOrfail($id);
+     $sup->reply=$request->reply;
+     $sup->replied=1;
+     $sup->hide=0;
+     $sup->update();
+     return redirect()->back();
+   }
+
+   public function removeSup($id){
+      $sup=Support::findOrfail($id);
+      $sup->delete();
+      return redirect()->back();
     }
 
     /**
