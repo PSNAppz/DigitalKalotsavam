@@ -37,6 +37,29 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Support <i class="fa fa-comments-o" aria-hidden="true"></i></div>
                 <div class="panel-body">
+                    @foreach($sup as $s)
+                            <ul class="media-list">
+                              <li class="media">
+                                <div class="media-left">
+                                  <a href="#">
+                                    <img class="media-object" src="/logo.jpeg" style="width:64px; height:64px;" alt="digitalkalotsavam">
+                                  </a>
+                                </div>
+                                <div class="media-body">
+                                   <a href="deleteSup/{{$s->id}}" class="close" aria-label="Close" ><span aria-hidden="true">&times;</span></a>
+                                  <h4 class="media-heading">#{{$s->id}} {{$s->subject}}</h4>
+                                  <h6>{{$s->message}}</h6>
+                                  <form method="POST" action="supportReply/{{$s->id}}">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                    <label>Reply:</label><br>
+                                    <textarea name="reply" style="width:100%; height:60px;"></textarea>
+                                    <br><br>
+                                    <input type="submit" class="btn btn-success" value="Reply">
+                                  </form>
+                                </div>
+                              </li>
+                            </ul>
+                        @endforeach
                 </div>
             </div>
         </div>
