@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('rollno');
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('house');
             $table->integer('classical_dance_boys')->nullable();
             $table->integer('classical_dance_girls')->nullable();
             $table->integer('semi_classical_dance_boys')->nullable();

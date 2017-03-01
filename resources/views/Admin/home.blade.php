@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-xs-12 col-md-3">
                       <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#cd201f;"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><br>Publish</h1></center>
+                        <center><h1 style="color:#cd201f;"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><br>Publish Score</h1></center>
                       </a>
                     </div>
 

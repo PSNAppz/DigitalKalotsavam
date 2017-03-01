@@ -22,6 +22,7 @@ class AdminCheck
               return redirect()->guest('login');
           }
       }
+
         return $next($request);
     }
 }
