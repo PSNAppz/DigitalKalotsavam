@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Student;
 
 class HomeController extends Controller
 {
@@ -33,6 +34,7 @@ class HomeController extends Controller
      */
     public function manage()
     {
-        return view('manage');
+        $stud = Student::where('house',2)->get();
+        return view('manage')->withStud($stud);
     }
 }
