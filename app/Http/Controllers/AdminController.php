@@ -8,6 +8,7 @@ use App\Registered_Event as Re;
 use App\Student;
 use DB;
 use App\Category;
+use App\DisqualifiedList as DL;
 
 class AdminController extends Controller
 {
@@ -35,7 +36,7 @@ class AdminController extends Controller
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=1;
-                $testing= Category::where('id',$re->eventid)->get();
+                $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
@@ -43,7 +44,7 @@ class AdminController extends Controller
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=2;
-                $testing= Category::where('id',$re->eventid)->get();
+                $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
@@ -51,7 +52,7 @@ class AdminController extends Controller
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=3;
-                $testing= Category::where('id',$re->eventid)->get();
+                $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
@@ -59,7 +60,7 @@ class AdminController extends Controller
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;
-                $testing= Category::where('id',$re->eventid)->get();
+                $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
@@ -72,9 +73,21 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function RuleCheck()
     {
-        //
+        $R= Student::get();
+        DL::truncate();
+        foreach($R as $std){
+            $test=Re::where('rollno',$std->rollno)->where('categoryid',3)->count();
+            if($test>1){
+                $Dl=new DL();
+                $Dl->name=$std->name;
+                $Dl->rollno=$std->rollno;
+                $Dl->type="Off-Stage";
+                $Dl->save();
+            }
+        }
+
     }
 
     /**
