@@ -101,9 +101,8 @@ body, html {
     </a>
     @if (Route::has('login'))
         @if (Auth::check())
-            <a style="color:#000;" href="{{ url('/#') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> link</a>
+            <a style="color:#000;" href="{{ url('/home') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-h-square"></i> Home</a>
             @else
-                <a style="color:#000;" href="{{ url('/') }}" class="w3-bar-item w3-button"><strong>HOME</strong></a>
                 <a style="color:#000;" href="{{ url('/login') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i><strong> Login</strong></a>
                 <a style="color:#000;" href="{{ url('/register') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i><strong>Register</strong></a>
             @endif
