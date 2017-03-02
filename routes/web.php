@@ -23,4 +23,5 @@ Route::get('/manage','HomeController@manage')->name('manage');
 Route::get('/deleteSup/{id}','AdminController@removeSup');
 Route::get('/delSup/{id}','HomeController@removeSup');
 Route::post('/supportReply/{id}','AdminController@reply');
+Route::get('/webteam', 'webteamController@index');
 Route::post('support','HomeController@supportPost');
