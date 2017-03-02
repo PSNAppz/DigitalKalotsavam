@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Support;
+use App\Registered_Event as Re;
+use App\Student;
+use DB;
+use App\Category;
 
 class AdminController extends Controller
 {
@@ -21,6 +25,46 @@ class AdminController extends Controller
     {
       $sup = Support::where('replied','0')->orderBy('id','desc')->get();
       return view('Admin.home')->withSup($sup);
+    }
+
+    public function register(){
+        $Stud= Student::get();
+        $Re= Re::truncate();
+        foreach($Stud as $s){
+            if($s->classical_dance_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=1;
+                $testing= Category::where('id',$re->eventid)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->classical_dance_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=2;
+                $testing= Category::where('id',$re->eventid)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->semi_classical_dance_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=3;
+                $testing= Category::where('id',$re->eventid)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->semi_classical_dance_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->eventid)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+        }
+        return redirect()->route('admin');
     }
 
     /**

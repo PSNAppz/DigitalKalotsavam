@@ -7,9 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
 
-    public function Event(){
-        $this->hasMany('App/Event');
-    }
   /**
    * The attributes that aren't mass assignable.
    *
@@ -22,4 +19,8 @@ class Student extends Model
   */
   protected $primaryKey = 'rollno';
   public $incrementing = false;
+
+  public function Registered_Event(){
+      return $this->hasMany('App\Registered_Event','rollno','rollno');
+  }
 }
