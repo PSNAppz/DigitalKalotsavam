@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/manage','HomeController@manage')->name('manage');
 Route::get('/regMan','AdminController@register')->name('reg');
+Route::get('/rule','AdminController@RuleCheck')->name('rule');
 Route::get('/deleteSup/{id}','AdminController@removeSup');
 Route::get('/delSup/{id}','HomeController@removeSup');
 Route::post('/supportReply/{id}','AdminController@reply');
