@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+
+    public function Event(){
+        $this->hasMany('App/Event');
+    }
   /**
    * The attributes that aren't mass assignable.
    *

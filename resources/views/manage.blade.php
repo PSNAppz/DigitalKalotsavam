@@ -49,7 +49,7 @@
                                     <th>{{$s->email}}</th>
                                     <th>@if ($s->classical_dance_boys)
                                         @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="fa fa-check" aria-hidden="true">{{$s->classical_dance_boys->}}</i>
                                     @endif</th>
 
                                     <th>@if ($s->classical_dance_girls)
