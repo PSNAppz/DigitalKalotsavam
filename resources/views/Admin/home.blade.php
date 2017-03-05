@@ -18,7 +18,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">Dashboard <i class="fa fa-tachometer" aria-hidden="true"></i></div>
                 <div class="panel-body">
                   <div class="row">
@@ -33,8 +33,8 @@
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#cd201f;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><br>View Registration</h1></center>
+                      <a href="/registrations" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#cd201f;"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><br>Registrations</h1></center>
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
@@ -43,12 +43,23 @@
                       </a>
                     </div>
 
+
+                    <div class="col-xs-12 col-md-3">
+                      <a href="#" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#cd201f;"><i class="fa fa-history" aria-hidden="true"></i><br>Reg Manager</h1></center>
+                      </a>
+                    </div>
+                    <div class="col-xs-12 col-md-3">
+                      <a href="/rule" class="thumbnail" style="text-decoration:none; ">
+                        <center><h1 style="color:#2ecc71;"><i class="fa fa-envelope" aria-hidden="true"></i></span><br>Send Emails</h1></center>
+                      </a>
+                    </div>
                   </div>
                 </div>
             </div>
         </div>
         <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
+            <div class="panel panel-danger">
                 <div class="panel-heading">Warning List<span class="badge"></span></div>
                 <div class="panel-body">
                     <div>
@@ -62,15 +73,15 @@
                               </tr>
                             </thead>
                             <tbody>
-                                <!-- Foreach -->
+                                @foreach($dl as $s)
                                 <tr>
-                                    <th>{$s->name}}</th>
-                                    <th>{$s->rollno}}</th>
-                                    <th>{$s->email}}</th>
-                                    <th>Type</th>
+                                    <th>{{$s->name}}</th>
+                                    <th>{{$s->rollno}}</th>
+                                    <th>{{$s->house}}</th>
+                                    <th>{{$s->type}}</th>
 
                                 </tr>
-                                    <!-- End -->
+                            @endforeach
                           </tbody>
                           </table>
                       </div>
