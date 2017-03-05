@@ -31,3 +31,5 @@ Route::post('support','HomeController@supportPost');
 Route::get('/val','AdminController@valform')->name('validate');
 Route::get('/validate/{id?}','AdminController@val');
 Route::get('/mailsend','AdminController@sendmail');
+Route::post('/upload','HomeController@upload');
+Route::get('/upload','HomeController@viewUpload');
