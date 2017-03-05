@@ -99,7 +99,15 @@
                                     <tr>
                                     <th>{{ $s->name }}</th>
                                     <th>{{ $s->rollno }}</th>
+
                                     <th>{{$s->email}}</th>
+
+                                <th>@if ($s->classical_dance_boys)
+                                    <th>{{ $s->email }}</th>
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
                                     <th>@if ($s->classical_dance_boys)
                                         @php $total++; @endphp
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -370,6 +378,7 @@
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
 
+
                                     <th>@if ($s->clay_modeling)
                                         @php $total++; @endphp
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -384,6 +393,19 @@
 
                                     <th> @php echo $total;@endphp </th>
                                 </tr>
+
+                                    <th>@if ($s->rangoli)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->clay_modeling)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <th>@php echo $total; @endphp</th>
+                                      </tr>
+                                    @endif</th>
+
                                 @endforeach
                                     <!-- End -->
                           </tbody>
