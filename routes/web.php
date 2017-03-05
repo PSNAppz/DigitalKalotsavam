@@ -31,3 +31,4 @@ Route::post('support','HomeController@supportPost');
 Route::get('/mail',function(){
     return view('Admin.regmail');
 });
+Route::get('/mailsend','AdminController@sendmail');
