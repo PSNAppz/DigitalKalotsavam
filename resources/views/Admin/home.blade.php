@@ -67,7 +67,7 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">Warning List<span class="badge"></span></div>
                 <div class="panel-body">
-                    <div>
+                    <div style="overflow-x:auto;">
                         <table id="reg" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>
