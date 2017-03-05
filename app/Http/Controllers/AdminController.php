@@ -78,15 +78,68 @@ class AdminController extends Controller
         $R= Student::get();
         DL::truncate();
         foreach($R as $std){
-            $test=Re::where('rollno',$std->rollno)->where('categoryid',3)->count();
-            if($test>1){
+            $Group=Re::where('rollno',$std->rollno)->where('categoryid',3)->count();
+            if($Group>1){
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
-                $Dl->type="Off-Stage";
+                $Dl->type="Group Event";
+                if($std->house==1){
+                    $Dl->house="Anandamayi";
+                }
+                elseif($std->house==2){
+                    $Dl->house="Amritamayi";
+                }
+                elseif($std->house==3){
+                    $Dl->house="Chinmayi";
+                }
+                else{
+                    $Dl->house="Jyothirmayi";
+                }
+                $Dl->save();
+            }
+            $Onstage=Re::where('rollno',$std->rollno)->where('categoryid',1)->count();
+            if($Onstage>1){
+                $Dl=new DL();
+                $Dl->name=$std->name;
+                $Dl->rollno=$std->rollno;
+                $Dl->type="On-Stage Event";
+                if($std->house==1){
+                    $Dl->house="Anandamayi";
+                }
+                elseif($std->house==2){
+                    $Dl->house="Amritamayi";
+                }
+                elseif($std->house==3){
+                    $Dl->house="Chinmayi";
+                }
+                else{
+                    $Dl->house="Jyothirmayi";
+                }
+                $Dl->save();
+            }
+            $Offstage=Re::where('rollno',$std->rollno)->where('categoryid',2)->count();
+            if($Offstage>1){
+                $Dl=new DL();
+                $Dl->name=$std->name;
+                $Dl->rollno=$std->rollno;
+                $Dl->type="Off-Stage Event";
+                if($std->house==1){
+                    $Dl->house="Anandamayi";
+                }
+                elseif($std->house==2){
+                    $Dl->house="Amritamayi";
+                }
+                elseif($std->house==3){
+                    $Dl->house="Chinmayi";
+                }
+                else{
+                    $Dl->house="Jyothirmayi";
+                }
                 $Dl->save();
             }
         }
+        //return redirect()->back();
 
     }
 

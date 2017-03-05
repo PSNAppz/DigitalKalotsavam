@@ -19,7 +19,7 @@ Auth::routes(['except' => ['register']]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
-Route::get('/manage','HomeController@manage')->name('manage');
+Route::get('/manage/{sort?}','HomeController@manage')->name('manage');
 Route::get('/regMan','AdminController@register')->name('reg');
 Route::get('/rule','AdminController@RuleCheck')->name('rule');
 Route::get('/deleteSup/{id}','AdminController@removeSup');
