@@ -20,6 +20,7 @@ class CreateDisqualifiedListsTable extends Migration
             $table->foreign('rollno')
             ->references('rollno')->on('students')
             ->onDelete('cascade')->onUpdate('cascade');
+            $table->string('house');
             $table->string('type');
             $table->timestamps();
         });
