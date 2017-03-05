@@ -25,8 +25,26 @@ class AdminController extends Controller
     public function index()
     {
       $sup = Support::where('replied','0')->orderBy('id','desc')->get();
-      return view('Admin.home')->withSup($sup);
+      $dl = DL::get();
+      return view('Admin.home')->withSup($sup)->withDl($dl);
     }
+    /**
+     * Show the Team Management Page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function registration(Request $request,$sort=null,$count=null)
+    {
+        $sort= $request->input('sort');
+        $name=$sort;
+        $stud = Student::get();
+        if($sort){
+            $sort = Student::where($sort ,'!=', 'NULL')->get();
+            $count =Student::where($name ,'!=', 'NULL')->count();
+        }
+        return view('Admin.registration')->withStud($stud)->withSort($sort)->withName($name)->withCount($count);
+    }
+
 
     public function register(){
         $Stud= Student::get();
@@ -139,7 +157,7 @@ class AdminController extends Controller
                 $Dl->save();
             }
         }
-        //return redirect()->back();
+        return redirect()->back();
 
     }
 
