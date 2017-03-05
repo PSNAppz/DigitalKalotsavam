@@ -19,6 +19,7 @@ Auth::routes(['except' => ['register']]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
+Route::get('/registrations/{sort?}','AdminController@registration')->name('adminreg');
 Route::get('/manage/{sort?}','HomeController@manage')->name('manage');
 Route::get('/regMan','AdminController@register')->name('reg');
 Route::get('/rule','AdminController@RuleCheck')->name('rule');
@@ -27,3 +28,6 @@ Route::get('/delSup/{id}','HomeController@removeSup');
 Route::post('/supportReply/{id}','AdminController@reply');
 Route::get('/webteam', 'webteamController@index');
 Route::post('support','HomeController@supportPost');
+Route::get('/mail',function(){
+    return view('Admin.regmail');
+});
