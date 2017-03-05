@@ -50,9 +50,31 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function manage()
+    public function manage(Request $request,$sort=null,$count=null)
     {
+        $sort= $request->input('sort');
+        $name=$sort;
         $stud = Student::where('house',2)->get();
-        return view('manage')->withStud($stud);
+        if($sort){
+            $sort = Student::where('house',2)->where($sort ,'!=', 'NULL')->get();
+            $count =Student::where('house',2)->where($name ,'!=', 'NULL')->count();
+        }
+        return view('manage')->withStud($stud)->withSort($sort)->withName($name)->withCount($count);
+    }
+
+    public function upload(Request $request){
+        //$file = new Upload();
+        //$title=$request->get('subject');
+        //if (Input::file('files')->isValid()) {
+      // $destinationPath = 'files'; // upload path
+       //$extension = Input::file('files')->getClientOriginalExtension(); // getting file extension
+       //$fileName = uniqid().'.'.$extension; // renameing
+       //Input::file('files')->move($destinationPath, $fileName);
+       //$file->subject = $title;
+       //$file->chapter=$request->get('chapter');
+       //$file->location=$fileName;
+       //$file->save();
+     //}
+     return redirect()->back();
     }
 }

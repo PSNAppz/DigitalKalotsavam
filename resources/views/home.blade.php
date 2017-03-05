@@ -24,14 +24,6 @@
         </div>
         <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
-                <div class="panel-heading">Score Board<span class="badge"></span></div>
-                <div class="panel-body">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
                 <div class="panel-heading">Support<span class="badge"></span></div>
                 <div class="panel-body">
                     <h3>Support</h3>
