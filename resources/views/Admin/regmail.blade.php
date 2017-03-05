@@ -195,11 +195,17 @@
                             <td style="color:#187272;">
                             <br>
                             <br>
-                            Thank you for participating. Your participation Id is <span style="color:red;">{{$id}}</span>. Please keep this id secret and submit it for further clarifications if needed.
+                            Your participation Id is <span style="color:red;">{{$id}}</span>. Please keep this id secret and submit it for further clarifications if required by the committee.
+                            <br><br>
+                            Events you have registered,<br>
+                            @foreach($events as $e)
+                                <b>{{$e->name}}</b><br>
+                            @endforeach
                             <br><br>
                             Thank you,<br>
                             <span style="color:black;">
                             Kalotsavam 2017 Core Committee</span>
+                            <hr>
                             <br>
                             <br>
                             </td>

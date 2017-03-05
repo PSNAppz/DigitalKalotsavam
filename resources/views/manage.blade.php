@@ -16,6 +16,7 @@
         )
     </script>
 
+
 <div class="container" style="width:95%;">
     <div class="row">
         <div class="col-md-14 col-md-offset-0">
@@ -113,6 +114,34 @@
                                 @endforeach
                             @endif
                                     <!-- End -->
+                          </tbody>
+                          </table>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-14 col-md-offset-0">
+            <div class="panel panel-warning">
+                <div class="panel-heading">Warning List<span class="badge"></span></div>
+                <div class="panel-body">
+                    <div>
+                        <table id="reg" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Rollno</th>
+                                <th>Type</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($dl as $s)
+                                <tr>
+                                    <th>{{$s->name}}</th>
+                                    <th>{{$s->rollno}}</th>
+                                    <th>{{$s->type}}</th>
+
+                                </tr>
+                            @endforeach
                           </tbody>
                           </table>
                       </div>

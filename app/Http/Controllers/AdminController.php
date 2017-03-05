@@ -105,16 +105,16 @@ class AdminController extends Controller
                 $Dl->rollno=$std->rollno;
                 $Dl->type="Group Event";
                 if($std->house==1){
-                    $Dl->house="Anandamayi";
-                }
-                elseif($std->house==2){
                     $Dl->house="Amritamayi";
                 }
+                elseif($std->house==2){
+                    $Dl->house="Jyothirmayi";
+                }
                 elseif($std->house==3){
-                    $Dl->house="Chinmayi";
+                    $Dl->house="Anandamayi";
                 }
                 else{
-                    $Dl->house="Jyothirmayi";
+                    $Dl->house="Chinmayi";
                 }
                 $Dl->save();
             }
@@ -125,16 +125,16 @@ class AdminController extends Controller
                 $Dl->rollno=$std->rollno;
                 $Dl->type="On-Stage Event";
                 if($std->house==1){
-                    $Dl->house="Anandamayi";
-                }
-                elseif($std->house==2){
                     $Dl->house="Amritamayi";
                 }
+                elseif($std->house==2){
+                    $Dl->house="Jyothirmayi";
+                }
                 elseif($std->house==3){
-                    $Dl->house="Chinmayi";
+                    $Dl->house="Anandamayi";
                 }
                 else{
-                    $Dl->house="Jyothirmayi";
+                    $Dl->house="Chinmayi";
                 }
                 $Dl->save();
             }
@@ -145,16 +145,16 @@ class AdminController extends Controller
                 $Dl->rollno=$std->rollno;
                 $Dl->type="Off-Stage Event";
                 if($std->house==1){
-                    $Dl->house="Anandamayi";
-                }
-                elseif($std->house==2){
                     $Dl->house="Amritamayi";
                 }
+                elseif($std->house==2){
+                    $Dl->house="Jyothirmayi";
+                }
                 elseif($std->house==3){
-                    $Dl->house="Chinmayi";
+                    $Dl->house="Anandamayi";
                 }
                 else{
-                    $Dl->house="Jyothirmayi";
+                    $Dl->house="Chinmayi";
                 }
                 $Dl->save();
             }
@@ -162,16 +162,34 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
-
+    public function valform(){
+        $true=0;
+        return view('Admin.validate')->withTrue($true);
+    }
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function val(Request $request)
     {
-        //
+        $id= $request->input('id');
+        $cnfrm=0;
+        $cnfrm =Confirm::where('secret',$id)->get();
+        $true=0;
+        if($cnfrm){
+            $true=1;
+                $results=Student::where('rollno',$cnfrm[0]->rollno)->get();
+                $events=DB::select(DB::raw("select * from events where id in (select eventid from registered__events where rollno = '".$cnfrm[0]->rollno."')"));
+        }
+        else{
+            $results=NULL;
+            $true=3;
+        }
+
+
+        return view('Admin.validate')->withResults($results)->withTrue($true)->withEvents($events);
     }
 
     /**
@@ -184,20 +202,20 @@ class AdminController extends Controller
     {
         $s= Student::get();
         foreach($s as $u){
-            $check= Confirm::where('rollno',$u->rollno);
+            $check=0;
+            $check= Confirm::where('rollno',$u->rollno)->count();
             if(!$check){
-
             $user = $u->name;
             $email =$u->email;
             $id=uniqid();
-
+            $events=DB::select(DB::raw("select * from events where id in (select eventid from registered__events where rollno = '".$u->rollno."')"));
             $cnfrm = new Confirm();
             $cnfrm->name=$user;
             $cnfrm->rollno=$u->rollno;
             $cnfrm->email=$email;
             $cnfrm->secret=$id;
 
-            Mail::send('Admin.regmail', ['user' => $user, 'id' => $id,'email' => $email], function($message) use ($email)
+            Mail::send('Admin.regmail', ['user' => $user, 'id' => $id,'email' => $email,'events'=>$events], function($message) use ($email)
             {
                 $message->from('kalotsavam@gmail.com', 'Kalotsavam Committee');
                 $message->subject('Amrita Kalotsavam 2k17 | Participation Confirmation');
@@ -209,7 +227,7 @@ class AdminController extends Controller
             }
         }
 
-        //return response()->json(['message' => 'Request completed']);
+        return redirect()->back();
     }
 
     /**
