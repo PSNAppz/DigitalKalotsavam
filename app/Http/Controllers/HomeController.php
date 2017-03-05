@@ -7,6 +7,8 @@ use App\Student;
 use App\Support;
 use Auth;
 use App\DisqualifiedList as DL;
+use App\Upload;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -76,20 +78,26 @@ class HomeController extends Controller
         }
         return view('manage')->withStud($stud)->withSort($sort)->withName($name)->withCount($count)->withDl($dl);
     }
+    public function viewUpload(){
+        $success=0;
+        return view('upload')->withSuccess($success);
+    }
 
     public function upload(Request $request){
-        //$file = new Upload();
-        //$title=$request->get('subject');
-        //if (Input::file('files')->isValid()) {
-      // $destinationPath = 'files'; // upload path
-       //$extension = Input::file('files')->getClientOriginalExtension(); // getting file extension
-       //$fileName = uniqid().'.'.$extension; // renameing
-       //Input::file('files')->move($destinationPath, $fileName);
-       //$file->subject = $title;
-       //$file->chapter=$request->get('chapter');
-       //$file->location=$fileName;
-       //$file->save();
-     //}
-     return redirect()->back();
+        $success=0;
+        $file = new Upload();
+        $title=$request->get('subject');
+        if (Input::file('files')->isValid()) {
+        $destinationPath = 'files'; // upload path
+        $extension = Input::file('files')->getClientOriginalExtension(); // getting file extension
+        $fileName = uniqid().'.'.$extension; // renameing
+        Input::file('files')->move($destinationPath, $fileName);
+        $success=1;
+        $file->name = $title;
+        $file->owner= Auth::User()->id;
+        $file->location=$fileName;
+        $file->save();
+      }
+     return view('upload')->withSuccess($success);
     }
 }
