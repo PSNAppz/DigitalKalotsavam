@@ -34,6 +34,58 @@
                                 <th>Classical dance girls</th>
                                 <th>Semi classical dance boys</th>
                                 <th>Semi classical dance girls</th>
+                                <th>Fancy dress boys</th>
+                                <th>Fancy dress girls</th>
+                                <th>Monoact boys</th>
+                                <th>Monoact girls</th>
+                                <th>Mimicry boys</th>
+                                <th>Mimicry girls</th>
+                                <th>Kadhaprasangam</th>
+                                <th>Shakespearean monologue</th>
+                                <th>Elocution english</th>
+                                <th>Elocution malayalam</th>
+                                <th>Elocution telugu</th>
+                                <th>Elocution sanskrit</th>
+                                <th>Recitation english</th>
+                                <th>Recitation malayalam</th>
+                                <th>Recitation hindi</th>
+                                <th>Recitation telugu</th>
+                                <th>Recitation sanskrit</th>
+                                <th>Classical music boys</th>
+                                <th>classical music girls</th>
+                                <th>Light music boys</th>
+                                <th>Light music girls</th>
+                                <th>Western solo boys</th>
+                                <th>Western solo girls</th>
+                                <th>Instrument percussion</th>
+                                <th>Instrument wind</th>
+                                <th>Instrument string</th>
+                                <th>Instrument piano</th>
+                                <th>Karaoke boys</th>
+                                <th>Karaoke girls</th>
+                                <th>Ashtapadi boys</th>
+                                <th>Ashtapadi girls</th>
+                                <th>Mappilapattu boys</th>
+                                <th>Mappilapattu girls</th>
+                                <th>Kadhakali sangeetham boys</th>
+                                <th>Kadhakali sangeetham girls</th>
+                                <th>Story writing english</th>
+                                <th>Story writing malayalam</th>
+                                <th>Essay writing english</th>
+                                <th>Essay writing malayalam</th>
+                                <th>Essay writing tamil</th>
+                                <th>Poetry writing english</th>
+                                <th>Poetry writing malayalam</th>
+                                <th>Poetry writing telugu</th>
+                                <th>Hindi essay</th>
+                                <th>Water cooling</th>
+                                <th>Recitation malayalam</th>
+                                <th>Pencil drawing</th>
+                                <th>Paper collage</th>
+                                <th>Face painting</th>
+                                <th>Cartooning</th>
+                                <th>Clay modeling</th>
+                                <th>Rangoli</th>
 
                                 <th>Total Events</th>
 
@@ -44,9 +96,14 @@
                                 @foreach($stud as $s)
                                     @php $total=0; @endphp
                                     <tr>
-                                    <th>{{$s->name}}</th>
-                                    <th>{{$s->rollno}}</th>
-                                    <th>{{$s->email}}</th>
+                                    <th>{{ $s->name }}</th>
+                                    <th>{{ $s->rollno }}</th>
+                                    <th>@if ($s->classical_dance_boys)
+                                    <th>{{ $s->email }}</th>
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
                                     <th>@if ($s->classical_dance_boys)
                                         @php $total++; @endphp
                                         <i class="fa fa-check" aria-hidden="true"></i>
@@ -67,8 +124,262 @@
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
 
-                                    <th>@php echo $total; @endphp</th>
-                                    </tr>
+                                    <th>@if ($s->fancy_dress_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->fancy_dress_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->monoact_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->monoact_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->mimicry_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->mimicry_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->kadhaprasangam)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->shakespearean_monologue)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->elocution_english)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->elocution_malayalam)
+                                      @php $total++; @endphp
+                                      <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->elocution_telugu)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->elocution_sanskrit)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->recitation_english)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->recitation_malayalam)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->recitation_hindi)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->recitation_telugu)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->recitation_sanskrit)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->classical_music_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->classical_music_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->light_music_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->light_music_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->western_solo_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->western_solo_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->instrument_percussion)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->instrument_wind)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->instrument_string)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->instrument_piano)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->karaoke_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->karaoke_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->ashtapadi_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->ashtapadi_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->mappilapattu_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->mappilapattu_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->kadhakali_sangeetham_boys)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->kadhakali_sangeetham_girls)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->story_writing_english)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->story_writing_malayalam)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->essay_writing_english)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->essay_writing_malayalam)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->essay_writing_tamil)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->poetry_writing_english)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->poetry_writing_malayalam)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->poetry_writing_telugu)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->hindi_essay)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->water_cooling)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->cartooning)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->pencil_drawing)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->paper_collage)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->face_painting)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->rangoli)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    @endif</th>
+
+                                    <th>@if ($s->clay_modeling)
+                                        @php $total++; @endphp
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <th>@php echo $total; @endphp</th>
+                                      </tr>
+                                    @endif</th>
                                 @endforeach
                                     <!-- End -->
                           </tbody>

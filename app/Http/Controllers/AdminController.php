@@ -84,6 +84,414 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
+            if($s->fancy_dress_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->fancy_dress_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->monoact_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->monoact_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->mimicry_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->mimicry_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->kadhaprasangam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->shakespearean_monologue){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->elocution_english){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->elocution_malayalam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->elocution_telugu){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->elocution_sanskrit){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->recitation_english){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->recitation_malayalam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->recitation_hindi){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->recitation_telugu){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->recitation_sanskrit){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->classical_music_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->classical_music_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->light_music_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->light_music_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->western_solo_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->western_solo_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->instrument_percussion){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->instrument_string){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->instrument_wind){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->instrument_piano){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->karaoke_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->karaoke_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->ashtapadi_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->ashtapadi_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->mappilapattu_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->mappilapattu_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->kadhakali_sangeetham_boys){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->kadhakali_sangeetham_girls){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->story_writing_english){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->story_writing_malayalam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->essay_writing_english){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->essay_writing_malayalam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->essay_writing_tamil){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->poetry_writing_english){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->poetry_writing_malayalam){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->poetry_writing_telugu){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->hindi_essay){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->water_cooling){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->cartooning){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->pencil_drawing){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->paper_collage){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->face_painting){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->rangoli){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
+            if($s->clay_modeling){
+                $re= new Re();
+                $re->rollno=$s->rollno;
+                $re->eventid=4;
+                $testing= Category::where('id',$re->Event->category_id)->get();
+                $re->categoryid=$testing[0]->id;
+                $re->save();
+            }
         }
         return redirect()->route('admin');
     }
