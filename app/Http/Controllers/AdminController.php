@@ -9,6 +9,8 @@ use App\Student;
 use DB;
 use App\Category;
 use App\DisqualifiedList as DL;
+use Mail;
+use App\MailConfirm as Confirm;
 
 class AdminController extends Controller
 {
@@ -586,9 +588,36 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function sendmail()
     {
-        //
+        $s= Student::get();
+        foreach($s as $u){
+            $check= Confirm::where('rollno',$u->rollno);
+            if(!$check){
+
+            $user = $u->name;
+            $email =$u->email;
+            $id=uniqid();
+
+            $cnfrm = new Confirm();
+            $cnfrm->name=$user;
+            $cnfrm->rollno=$u->rollno;
+            $cnfrm->email=$email;
+            $cnfrm->secret=$id;
+
+            Mail::send('Admin.regmail', ['user' => $user, 'id' => $id,'email' => $email], function($message) use ($email)
+            {
+                $message->from('kalotsavam@gmail.com', 'Kalotsavam Committee');
+                $message->subject('Amrita Kalotsavam 2k17 | Participation Confirmation');
+                $message->to($email);
+
+            });
+            $cnfrm->save();
+
+            }
+        }
+
+        //return response()->json(['message' => 'Request completed']);
     }
 
     /**
