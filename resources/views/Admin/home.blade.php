@@ -50,7 +50,7 @@
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
-                      <a href="/rule" class="thumbnail" style="text-decoration:none; ">
+                      <a href="/mailsend" class="thumbnail" style="text-decoration:none; ">
                         <center><h1 style="color:#2ecc71;"><i class="fa fa-envelope" aria-hidden="true"></i></span><br>Send Emails</h1></center>
                       </a>
                     </div>
