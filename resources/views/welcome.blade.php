@@ -118,9 +118,7 @@ body, html {
       @if (Route::has('login'))
           @if (Auth::check())
           @else
-              <a style="color:#000;" href="{{ url('/#') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">link</a>
               <a style="color:#000;" href="{{ url('/login') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">Login</a>
-              <a style="color:#000;" href="{{ url('/register') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">Register</a>
         @endif
   </div>
     @endif
