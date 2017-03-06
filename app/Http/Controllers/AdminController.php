@@ -148,7 +148,7 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
-            if($s->elocution_english){
+            if($s->elocution_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;
@@ -156,7 +156,7 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
-            if($s->elocution_malayalam){
+            if($s->elocution_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;
@@ -276,7 +276,7 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
-            if($s->instrument_string){
+            if($s->instrument_wind){
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;
@@ -284,7 +284,7 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
-            if($s->instrument_wind){
+            if($s->instrument_string){
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;
@@ -436,7 +436,7 @@ class AdminController extends Controller
                 $re->categoryid=$testing[0]->id;
                 $re->save();
             }
-            if($s->water_cooling){
+            if($s->water_coloring){
                 $re= new Re();
                 $re->rollno=$s->rollno;
                 $re->eventid=4;

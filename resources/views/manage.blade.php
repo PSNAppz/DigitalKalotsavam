@@ -43,8 +43,8 @@
                                 <th>Mimicry girls</th>
                                 <th>Kadhaprasangam</th>
                                 <th>Shakespearean monologue</th>
-                                <th>Elocution english</th>
                                 <th>Elocution malayalam</th>
+                                <th>Elocution english</th>
                                 <th>Elocution telugu</th>
                                 <th>Elocution sanskrit</th>
                                 <th>Recitation english</th>
@@ -80,13 +80,12 @@
                                 <th>Poetry writing telugu</th>
                                 <th>Hindi essay</th>
                                 <th>Water coloring</th>
-                                <th>Recitation malayalam</th>
+                                <th>Cartooning</th>
                                 <th>Pencil drawing</th>
                                 <th>Paper collage</th>
                                 <th>Face painting</th>
-                                <th>Cartooning</th>
-                                <th>Clay modeling</th>
                                 <th>Rangoli</th>
+                                <th>Clay modeling</th>
 
                                 <th>Total Events</th>
 
@@ -160,12 +159,12 @@
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
 
-                                    <th>@if ($s->elocution_english)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    <th>@if ($s->elocution_malayalam)
+                                      @php $total++; @endphp
+                                      <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
 
-                                    <th>@if ($s->elocution_malayalam)
+                                    <th>@if ($s->elocution_english)
                                       @php $total++; @endphp
                                       <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
@@ -374,10 +373,7 @@
                                         @php $total++; @endphp
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
-                                    <th>@if ($s->clay_modeling)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    @endif</th>
+
                                     <th> @php echo $total;@endphp </th>
                                 </tr>
                                 @endforeach
