@@ -583,10 +583,12 @@ class AdminController extends Controller
     public function val(Request $request)
     {
         $id= $request->input('id');
-        $cnfrm=0;
+        $count=0;
         $cnfrm =Confirm::where('secret',$id)->get();
+        $count=Confirm::where('secret',$id)->count();
         $true=0;
-        if($cnfrm){
+        $events=0;
+        if($count){
             $true=1;
                 $results=Student::where('rollno',$cnfrm[0]->rollno)->get();
                 $events=DB::select(DB::raw("select * from events where id in (select eventid from registered__events where rollno = '".$cnfrm[0]->rollno."')"));
