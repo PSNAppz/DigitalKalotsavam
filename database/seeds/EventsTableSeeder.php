@@ -205,7 +205,7 @@ class EventsTableSeeder extends Seeder
           'category_id' => '2'
         ],
         [
-          'name' => 'water_cooling',
+          'name' => 'water_coloring',
           'category_id' => '2'
         ],
         [
