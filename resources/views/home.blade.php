@@ -14,8 +14,8 @@
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#09b83e;"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><br>View Events</h1></center>
+                      <a href="/upload" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#09b83e;"><i class="fa fa-upload" aria-hidden="true"></i><br>Upload File</h1></center>
                       </a>
                     </div>
                   </div>

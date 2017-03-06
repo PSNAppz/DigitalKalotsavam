@@ -45,13 +45,18 @@
 
 
                     <div class="col-xs-12 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
+                      <a href="/regMan" class="thumbnail" style="text-decoration:none;">
                         <center><h1 style="color:#cd201f;"><i class="fa fa-history" aria-hidden="true"></i><br>Reg Manager</h1></center>
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
-                      <a href="/rule" class="thumbnail" style="text-decoration:none; ">
+                      <a href="/mailsend" class="thumbnail" style="text-decoration:none; ">
                         <center><h1 style="color:#2ecc71;"><i class="fa fa-envelope" aria-hidden="true"></i></span><br>Send Emails</h1></center>
+                      </a>
+                    </div>
+                    <div class="col-xs-12 col-md-6" >
+                      <a href="/val" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#f1c40f;"><span class="glyphicon glyphicon-user" aria-hidden="true" ></span><br>Validate Participant</h1></center>
                       </a>
                     </div>
                   </div>
@@ -62,7 +67,7 @@
             <div class="panel panel-danger">
                 <div class="panel-heading">Warning List<span class="badge"></span></div>
                 <div class="panel-body">
-                    <div>
+                    <div style="overflow-x:auto;">
                         <table id="reg" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>

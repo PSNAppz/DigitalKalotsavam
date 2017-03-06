@@ -28,7 +28,8 @@ Route::get('/delSup/{id}','HomeController@removeSup');
 Route::post('/supportReply/{id}','AdminController@reply');
 Route::get('/webteam', 'webteamController@index');
 Route::post('support','HomeController@supportPost');
-Route::get('/mail',function(){
-    return view('Admin.regmail');
-});
+Route::get('/val','AdminController@valform')->name('validate');
+Route::get('/validate/{id?}','AdminController@val');
 Route::get('/mailsend','AdminController@sendmail');
+Route::post('/upload','HomeController@upload');
+Route::get('/upload','HomeController@viewUpload');
