@@ -521,7 +521,7 @@ class AdminController extends Controller
                 elseif($std->house==3){
                     $Dl->house="Anandamayi";
                 }
-                else{
+                elseif($std->house==4){
                     $Dl->house="Chinmayi";
                 }
                 $Dl->save();
@@ -541,7 +541,7 @@ class AdminController extends Controller
                 elseif($std->house==3){
                     $Dl->house="Anandamayi";
                 }
-                else{
+                elseif($std->house==4){
                     $Dl->house="Chinmayi";
                 }
                 $Dl->save();
@@ -561,7 +561,7 @@ class AdminController extends Controller
                 elseif($std->house==3){
                     $Dl->house="Anandamayi";
                 }
-                else{
+                elseif($std->house==4){
                     $Dl->house="Chinmayi";
                 }
                 $Dl->save();
