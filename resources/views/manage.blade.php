@@ -340,7 +340,7 @@
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
 
-                                    <th>@if ($s->water_cooling)
+                                    <th>@if ($s->water_coloring)
                                         @php $total++; @endphp
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     @endif</th>
