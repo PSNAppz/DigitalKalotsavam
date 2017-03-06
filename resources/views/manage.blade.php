@@ -42,8 +42,8 @@
                                 <th>Mimicry girls</th>
                                 <th>Kadhaprasangam</th>
                                 <th>Shakespearean monologue</th>
-                                <th>Elocution english</th>
                                 <th>Elocution malayalam</th>
+                                <th>Elocution english</th>
                                 <th>Elocution telugu</th>
                                 <th>Elocution sanskrit</th>
                                 <th>Recitation english</th>
@@ -78,14 +78,13 @@
                                 <th>Poetry writing malayalam</th>
                                 <th>Poetry writing telugu</th>
                                 <th>Hindi essay</th>
-                                <th>Water cooling</th>
-                                <th>Recitation malayalam</th>
+                                <th>Water coloring</th>
+                                <th>Cartooning</th>
                                 <th>Pencil drawing</th>
                                 <th>Paper collage</th>
                                 <th>Face painting</th>
-                                <th>Cartooning</th>
-                                <th>Clay modeling</th>
                                 <th>Rangoli</th>
+                                <th>Clay modeling</th>
 
                                 <th>Total Events</th>
 
