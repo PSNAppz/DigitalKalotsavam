@@ -14,6 +14,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif;}
 body, html {
@@ -133,24 +134,242 @@ body, html {
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64">
-  <h3 class="w3-center slideanim"> heading 1</h3>
-  <p class="w3-center slideanim"><em> sub heading </em></p>
-  <p class="slideanim"> text your content here....</p>
+  <h2 class="w3-center slideanim" style="font-family: 'Righteous', cursive; color:#990000;"> EVENTS </h2>
+  <p class="w3-center slideanim"><em>  </em></p>
+ <div class="slideanim">
+     <div class="container">
+<ul class="nav nav-tabs" style="font-size:18px;">
+<li class="active"><a data-toggle="tab" style="color:#990000;" href="#f1"><b>ON STAGE</b></a></li>
+<li><a data-toggle="tab" style="color:#990000;" href="#f2"><b>OFF STAGE</b></a></li>
+<!--<li><a data-toggle="tab" style="color:#990000;" href="#f3"><b>GROUPS</b></a></li>-->
+</ul>
+</div>
+
+
+<div class="tab-content text-left container-fluid">
+    <div id="f1" class="tab-pane active">
+        <div class="panel panel-default">
+            <div class="panel-body slideanim" style="background-color:#000;">
+                    <div style=" color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #000;">
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Classical Dance Boys</td>
+                            <td style="color:#fff;background-color: #000;" >Classical Dance Girls</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Semi-Classical Dance Boys</td>
+                            <td style="color:#fff;background-color: #000;" >Semi-Classical Dance Girls</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Fancy Dress Boys</td>
+                            <td style="color:#fff;background-color: #000;" >Fancy Dress Girls</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Monoact Boys</td>
+                            <td style="color:#fff;background-color: #000;" >Monoact Girls</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Mimicry Boys</td>
+                            <td style="color:#fff;background-color: #000;" >Mimicry Girls</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Kadhaprasangam</td>
+                            <td style="color:#fff;background-color: #000;" >Shakespearean Monologues</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Elocution Malayalam</td>
+                            <td style="color:#fff;background-color: #000;" >Elocution English</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Elocution Telugu</td>
+                            <td style="color:#fff;background-color: #000;" >Elocution Sanskrit</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Recitation English</td>
+                            <td style="color:#fff;background-color: #000;" >Recitation Malayalam</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Recitation Hindi</td>
+                            <td style="color:#fff;background-color: #000;" >Recitation Telugu</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Recitation Sanskrit</td>
+                            <td style="color:#fff;background-color: #000;" >Classical Music Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Classical Music Girls</td>
+                            <td style="color:#fff;background-color: #000;" >Light Music Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Light Music Girls</td>
+                            <td style="color:#fff;background-color: #000;" >Western Solo Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Western Solo girls</td>
+                            <td style="color:#fff;background-color: #000;" >Instrument Percussion</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Instrument Wind</td>
+                            <td style="color:#fff;background-color: #000;" >Instrument String</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Instrument Piano</td>
+                            <td style="color:#fff;background-color: #000;" >Karokae Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Karokae Girls</td>
+                            <td style="color:#fff;background-color: #000;" >Ashtapadi Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Ashtapadi Girls</td>
+                            <td style="color:#fff;background-color: #000;" >Mappilapattu Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Mappilapattu Girls</td>
+                            <td style="color:#fff;background-color: #000;" >Kadhakali Sangeetham Boys</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Kadhakali Sangeetham Girls</td>
+                            <td style="color:#fff;background-color: #000;" ></td>
+                        </tr>
+                    </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="f2" class="tab-pane fade">
+        <div class="panel panel-default">
+            <div class="panel-body slideanim" style="background-color:#000;">
+                    <div style=" color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #000;">
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Story Writing English</td>
+                            <td style="color:#fff;background-color: #000;" >Story Writing Malayalam</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Essay Writing English</td>
+                            <td style="color:#fff;background-color: #000;" >Essay Writing Malayalam</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Essay Writing Tamil</td>
+                            <td style="color:#fff;background-color: #000;" >Poetry Writing English</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Poetry Writing Malayalam</td>
+                            <td style="color:#fff;background-color: #000;" >Poetry Writing Telugu</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Hindi Essay</td>
+                            <td style="color:#fff;background-color: #000;" >Water Coloring</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Cartooning</td>
+                            <td style="color:#fff;background-color: #000;" >Pencil Drawing</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Paper collage</td>
+                            <td style="color:#fff;background-color: #000;" >Face Painting</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#fff;background-color: #000;" >Rangoli</td>
+                            <td style="color:#fff;background-color: #000;" >Clay Modeling</td>
+                        </tr>
+                    </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="f3" class="tab-pane fade">
+        <div class="panel panel-default">
+            <div class="panel-body" style="background-color:#804C0B;">
+                    <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ </div>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container ">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-light-grey w3-wide slideanim">text your heading here....</span>
+    <span class="w3-xxlarge w3-text-light-grey w3-wide slideanim">Galary</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" >
-  <h3 class="w3-center slideanim">heading 2</h3>
-  <p class="w3-center slideanim"><em> sub heading</em></p><br>
-<div class="slideanim">
-    text content here......
+  <h3 class="w3-center slideanim" style="font-family: 'Righteous', cursive; color:#990000; font-size:28px">Memorable Moments</h3>
+<div>
+    <div role="tabpanel" class="tab-pane">
+            <h1 class="text-center">
+                <span style="color:#a5011f">
+                
+                </span>
+            </h1>
+            <br><br>
+            <div>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="{{ asset('images/galary1.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{ asset('images/galary2.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                   <div class="item">
+                      <img src="{{ asset('images/galary4.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                  </div>
+                    <!--<div class="item">
+                      <img src="{{ asset('images/galary5.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                  </div>-->
+                    <div class="item">
+                      <img src="{{ asset('images/galary8.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{ asset('images/galary10.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="{{ asset('images/galary11.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </div>
+        </div>
 </div>
 </div>
 <!-- Footer -->
