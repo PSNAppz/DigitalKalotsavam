@@ -13,12 +13,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif;}
 body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;
+}
+.main-heading {
+    font-family: 'Dosis', sans-serif;
+
 }
 
 /* Create a Parallax Effect */
@@ -104,7 +109,6 @@ body, html {
             <a style="color:#000;" href="{{ url('/home') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-h-square"></i> Home</a>
             @else
                 <a style="color:#000;" href="{{ url('/login') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i><strong> Login</strong></a>
-                <a style="color:#000;" href="{{ url('/register') }}" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i><strong>Register</strong></a>
             @endif
   </div>
   @endif
@@ -114,9 +118,7 @@ body, html {
       @if (Route::has('login'))
           @if (Auth::check())
           @else
-              <a style="color:#000;" href="{{ url('/#') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">link</a>
               <a style="color:#000;" href="{{ url('/login') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">Login</a>
-              <a style="color:#000;" href="{{ url('/register') }}" class="w3-bar-item w3-button" onclick="toggleFunction()">Register</a>
         @endif
   </div>
     @endif
@@ -125,7 +127,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle " style="white-space:nowrap;">
-    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">Kalolsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:50px;">Kalolsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
   </div>
 </div>
 
