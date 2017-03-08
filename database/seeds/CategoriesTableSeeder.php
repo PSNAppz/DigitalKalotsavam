@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Category;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -11,6 +12,8 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
+
+        Category::truncate();
         DB::table('categories')->insert(
           ['name' => 'Onstage'],
           ['name' => 'Offstage'],

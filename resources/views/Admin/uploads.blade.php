@@ -27,10 +27,10 @@
                             <thead>
                               <tr>
                                 <th>ID</th>
-                                <th>Name</th>
                                 <th>Owner</th>
                                 <th>File Name</th>
                                 <th>Uploaded At</th>
+                                <th>Download</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -38,9 +38,22 @@
                                 @foreach($uploads as $up)
                                     <tr>
                                     <th>{{$up->id}}</th>
+                                    <th>@if($up->owner==1)
+                                    Amritamayi
+                                    @elseif($up->owner==2)
+                                    Jyothirmayi
+                                    @elseif($up->owner==3)
+                                    Anandamayi
+                                    @elseif($up->owner==4)
+                                    Chinmayi
+                                    @else
+                                    Admin
+                                    @endif
+                                  </th>
                                     <th>{{$up->name}}</th>
-                                    <th>{{$up->owner}}</th>
+
                                     <th>{{$up->created_at}}</th>
+                                    <th><a class="btn btn-success btn-sm" href="/files/{{$up->location}}">Download</a></th>
                                     </tr>
                                 @endforeach
                                     <!-- End -->
@@ -53,4 +66,3 @@
       </div>
 </div>
 @endsection
-<script src="{{ asset('js/app.js') }}"></script>
