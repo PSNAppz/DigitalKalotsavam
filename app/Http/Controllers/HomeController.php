@@ -69,6 +69,9 @@ class HomeController extends Controller
         elseif($id==4){
             $dl = DL::where('house',"Chinmayi")->get();
         }
+        else{
+          $dl = DL::get();
+        }
         $sort= $request->input('sort');
         $name=$sort;
         $stud = Student::where('house',$id)->get();
