@@ -33,3 +33,4 @@ Route::get('/validate/{id?}','AdminController@val');
 Route::get('/mailsend','AdminController@sendmail');
 Route::post('/upload','HomeController@upload');
 Route::get('/upload','HomeController@viewUpload');
+Route::get('/admin/uploads','AdminController@viewupload');

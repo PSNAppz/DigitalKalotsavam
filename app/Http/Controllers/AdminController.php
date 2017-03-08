@@ -11,6 +11,7 @@ use App\Category;
 use App\DisqualifiedList as DL;
 use Mail;
 use App\MailConfirm as Confirm;
+use App\Upload;
 
 class AdminController extends Controller
 {
@@ -684,8 +685,9 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function viewupload()
     {
-        //
+        $uploads = Upload::get();
+        return view('Admin.uploads');
     }
 }
