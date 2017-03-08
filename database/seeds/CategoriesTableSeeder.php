@@ -12,9 +12,9 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert(
-          ['name' => 'Onstage Solo'],
-          ['name' => 'Offstage Solo'],
-          ['name' => 'Onstage Group']
+          ['name' => 'Onstage'],
+          ['name' => 'Offstage'],
+          ['name' => 'Group']
         );
     }
 }
