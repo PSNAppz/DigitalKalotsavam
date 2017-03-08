@@ -128,7 +128,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle " style="white-space:nowrap;">
-    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:50px;">Kalolsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:50px;">Amrita Kalotsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
   </div>
 </div>
 
@@ -296,7 +296,7 @@ body, html {
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container ">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-light-grey w3-wide slideanim">Galary</span>
+    <span class="w3-xxlarge w3-text-light-grey w3-wide slideanim">Gallery</span>
   </div>
 </div>
 
