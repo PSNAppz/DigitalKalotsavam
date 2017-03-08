@@ -569,9 +569,11 @@ class AdminController extends Controller
                 }
                 $Dl->save();
             }
+            $oneOffGroup=0;
             $twoOffGroup=0;
-            $twoOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',3)->where('eventid',163)->where('eventid',162)->count();
-            if($twoOffGroup){
+            $twoOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',2)->where('eventid',53)->count();
+            $oneOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',2)->where('eventid',52)->count();
+            if($twoOffGroup ==1 && $oneOffGroup ==1){
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
