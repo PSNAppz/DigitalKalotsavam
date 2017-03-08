@@ -55,13 +55,13 @@
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3" >
-                      <a href="/val" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#f1c40f;"><span class="glyphicon glyphicon-user" aria-hidden="true" ></span><br>Validate Participant</h1></center>
+                      <a href="admin/uploads" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#2ecc71;"><i class="fa fa-cloud-upload" aria-hidden="true"></i><br>View Uploads</h1></center>
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3" >
-                      <a href="/uploads" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#f1c40f;"><span class="glyphicon glyphicon-user" aria-hidden="true" ></span><br>View Uploads</h1></center>
+                      <a href="/val" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#f1c40f;"><i class="fa fa-id-badge" aria-hidden="true"></i><br>Validate</h1></center>
                       </a>
                     </div>
                   </div>

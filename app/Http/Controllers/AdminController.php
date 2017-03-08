@@ -7,11 +7,11 @@ use App\Support;
 use App\Registered_Event as Re;
 use App\Student;
 use DB;
+use App\Upload;
 use App\Category;
 use App\DisqualifiedList as DL;
 use Mail;
 use App\MailConfirm as Confirm;
-use App\Upload;
 
 class AdminController extends Controller
 {
@@ -567,6 +567,27 @@ class AdminController extends Controller
                 }
                 $Dl->save();
             }
+            $twoOffGroup=0;
+            $twoOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',3)->where('face_painting','and','paper_collage')->count();
+            if($twoOffGroup){
+                $Dl=new DL();
+                $Dl->name=$std->name;
+                $Dl->rollno=$std->rollno;
+                $Dl->type="Multiple Off Stage Group";
+                if($std->house==1){
+                    $Dl->house="Amritamayi";
+                }
+                elseif($std->house==2){
+                    $Dl->house="Jyothirmayi";
+                }
+                elseif($std->house==3){
+                    $Dl->house="Anandamayi";
+                }
+                elseif($std->house==4){
+                    $Dl->house="Chinmayi";
+                }
+                $Dl->save();
+            }
         }
         return redirect()->back();
 
@@ -680,14 +701,14 @@ class AdminController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * View Uploads
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function viewupload()
     {
-        $uploads = Upload::get();
-        return view('Admin.uploads');
+        $uploads=Upload::get();
+        return view('Admin.uploads')->withUploads($uploads);
     }
 }
