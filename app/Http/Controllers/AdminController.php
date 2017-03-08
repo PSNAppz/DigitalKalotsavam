@@ -12,6 +12,8 @@ use App\Category;
 use App\DisqualifiedList as DL;
 use Mail;
 use App\MailConfirm as Confirm;
+use App\ScoreBoard as Score;
+
 
 class AdminController extends Controller
 {
@@ -88,7 +90,7 @@ class AdminController extends Controller
             if($s->fancy_dress_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=5;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -96,7 +98,7 @@ class AdminController extends Controller
             if($s->fancy_dress_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=6;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -104,7 +106,7 @@ class AdminController extends Controller
             if($s->monoact_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=7;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -112,7 +114,7 @@ class AdminController extends Controller
             if($s->monoact_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=8;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -120,7 +122,7 @@ class AdminController extends Controller
             if($s->mimicry_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=9;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -128,7 +130,7 @@ class AdminController extends Controller
             if($s->mimicry_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=10;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -136,7 +138,7 @@ class AdminController extends Controller
             if($s->kadhaprasangam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=11;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -144,7 +146,7 @@ class AdminController extends Controller
             if($s->shakespearean_monologue){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=12;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -152,7 +154,7 @@ class AdminController extends Controller
             if($s->elocution_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=13;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -160,7 +162,7 @@ class AdminController extends Controller
             if($s->elocution_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=14;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -168,7 +170,7 @@ class AdminController extends Controller
             if($s->elocution_telugu){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=15;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -176,7 +178,7 @@ class AdminController extends Controller
             if($s->elocution_sanskrit){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=16;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -184,7 +186,7 @@ class AdminController extends Controller
             if($s->recitation_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=17;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -192,7 +194,7 @@ class AdminController extends Controller
             if($s->recitation_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=18;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -200,7 +202,7 @@ class AdminController extends Controller
             if($s->recitation_hindi){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=19;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -208,7 +210,7 @@ class AdminController extends Controller
             if($s->recitation_telugu){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=20;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -216,7 +218,7 @@ class AdminController extends Controller
             if($s->recitation_sanskrit){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=21;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -224,7 +226,7 @@ class AdminController extends Controller
             if($s->classical_music_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=22;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -232,7 +234,7 @@ class AdminController extends Controller
             if($s->classical_music_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=23;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -240,7 +242,7 @@ class AdminController extends Controller
             if($s->light_music_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=24;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -248,7 +250,7 @@ class AdminController extends Controller
             if($s->light_music_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=25;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -256,7 +258,7 @@ class AdminController extends Controller
             if($s->western_solo_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=26;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -264,7 +266,7 @@ class AdminController extends Controller
             if($s->western_solo_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=27;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -272,7 +274,7 @@ class AdminController extends Controller
             if($s->instrument_percussion){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=28;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -280,7 +282,7 @@ class AdminController extends Controller
             if($s->instrument_wind){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=29;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -288,7 +290,7 @@ class AdminController extends Controller
             if($s->instrument_string){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=30;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -296,7 +298,7 @@ class AdminController extends Controller
             if($s->instrument_piano){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=31;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -304,7 +306,7 @@ class AdminController extends Controller
             if($s->karaoke_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=32;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -312,7 +314,7 @@ class AdminController extends Controller
             if($s->karaoke_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=33;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -320,7 +322,7 @@ class AdminController extends Controller
             if($s->ashtapadi_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=34;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -328,7 +330,7 @@ class AdminController extends Controller
             if($s->ashtapadi_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=35;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -336,7 +338,7 @@ class AdminController extends Controller
             if($s->mappilapattu_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=36;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -344,7 +346,7 @@ class AdminController extends Controller
             if($s->mappilapattu_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=37;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -352,7 +354,7 @@ class AdminController extends Controller
             if($s->kadhakali_sangeetham_boys){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=38;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -360,7 +362,7 @@ class AdminController extends Controller
             if($s->kadhakali_sangeetham_girls){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=39;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -368,7 +370,7 @@ class AdminController extends Controller
             if($s->story_writing_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=40;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -376,7 +378,7 @@ class AdminController extends Controller
             if($s->story_writing_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=41;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -384,7 +386,7 @@ class AdminController extends Controller
             if($s->essay_writing_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=42;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -392,7 +394,7 @@ class AdminController extends Controller
             if($s->essay_writing_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=43;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -400,7 +402,7 @@ class AdminController extends Controller
             if($s->essay_writing_tamil){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=44;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -408,7 +410,7 @@ class AdminController extends Controller
             if($s->poetry_writing_english){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=45;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -416,7 +418,7 @@ class AdminController extends Controller
             if($s->poetry_writing_malayalam){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=46;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -424,7 +426,7 @@ class AdminController extends Controller
             if($s->poetry_writing_telugu){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=47;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -432,7 +434,7 @@ class AdminController extends Controller
             if($s->hindi_essay){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=48;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -440,7 +442,7 @@ class AdminController extends Controller
             if($s->water_coloring){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=49;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -448,7 +450,7 @@ class AdminController extends Controller
             if($s->cartooning){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=50;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -456,7 +458,7 @@ class AdminController extends Controller
             if($s->pencil_drawing){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=51;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -464,7 +466,7 @@ class AdminController extends Controller
             if($s->paper_collage){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=52;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -472,7 +474,7 @@ class AdminController extends Controller
             if($s->face_painting){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=53;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -480,7 +482,7 @@ class AdminController extends Controller
             if($s->rangoli){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=54;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -488,7 +490,7 @@ class AdminController extends Controller
             if($s->clay_modeling){
                 $re= new Re();
                 $re->rollno=$s->rollno;
-                $re->eventid=4;
+                $re->eventid=55;
                 $testing= Category::where('id',$re->Event->category_id)->get();
                 $re->categoryid=$testing[0]->id;
                 $re->save();
@@ -508,7 +510,7 @@ class AdminController extends Controller
         DL::truncate();
         foreach($R as $std){
             $Group=Re::where('rollno',$std->rollno)->where('categoryid',3)->count();
-            if($Group>1){
+            if($Group>3){
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
@@ -528,7 +530,7 @@ class AdminController extends Controller
                 $Dl->save();
             }
             $Onstage=Re::where('rollno',$std->rollno)->where('categoryid',1)->count();
-            if($Onstage>1){
+            if($Onstage>4){
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
@@ -548,7 +550,7 @@ class AdminController extends Controller
                 $Dl->save();
             }
             $Offstage=Re::where('rollno',$std->rollno)->where('categoryid',2)->count();
-            if($Offstage>1){
+            if($Offstage>4){
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
@@ -568,7 +570,7 @@ class AdminController extends Controller
                 $Dl->save();
             }
             $twoOffGroup=0;
-            $twoOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',3)->where('face_painting','and','paper_collage')->count();
+            $twoOffGroup=Re::where('rollno',$std->rollno)->where('categoryid',3)->where('eventid',163)->where('eventid',162)->count();
             if($twoOffGroup){
                 $Dl=new DL();
                 $Dl->name=$std->name;
@@ -672,6 +674,8 @@ class AdminController extends Controller
     {
         //
     }
+
+
 
     public function reply(Request $request,$id){
      $sup = Support::findOrfail($id);
