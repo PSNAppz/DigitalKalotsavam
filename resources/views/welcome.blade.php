@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Optional theme -->
-<title>Kalolsavam 2k17 </title>
+<title>Kalotsavam 2k17 </title>
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -37,9 +37,10 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('images/kalotsavam-4.jpg');
+    background-image: url('images/logo.jpg');
     min-height: 100%;
      opacity: 0.9;
+     width:100%;
 }
 
 /* Second image (Portfolio) */
@@ -95,6 +96,9 @@ body, html {
     }
   }
 
+  table {
+      font-family: Helvetica;
+  }
 
 </style>
 <script src="{{ asset('js/app.js') }}"></script>
@@ -128,10 +132,8 @@ body, html {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle w3-black " style="white-space:nowrap;">
-    <span class="w3-center w3-padding-xlarge  w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:51px; ">Amrita Kalotsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
-    <br>
-    <p class="w3-center" style="font-family: 'Righteous', cursive; color:#fff; font-size:20px" id="demo"></p>
+  <div style="white-space:nowrap; ">
+    <p class="w3-center" style="font-family: 'Righteous', cursive; color:#900000; font-size:20px" id="demo"></p>
   </div>
 </div>
 
@@ -152,88 +154,88 @@ body, html {
 <div class="tab-content text-left container-fluid">
     <div id="f1" class="tab-pane active">
         <div class="panel panel-default">
-            <div class="panel-body slideanim" style="background-color:#000;">
+            <div class="panel-body slideanim" style="background-color:#fff;">
                     <div style=" color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #000;">
+                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #fff;">
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Classical Dance Boys</td>
-                            <td style="color:#fff;background-color: #000;" >Classical Dance Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Classical Dance Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Classical Dance Girls</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Semi-Classical Dance Boys</td>
-                            <td style="color:#fff;background-color: #000;" >Semi-Classical Dance Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Semi-Classical Dance Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Semi-Classical Dance Girls</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Fancy Dress Boys</td>
-                            <td style="color:#fff;background-color: #000;" >Fancy Dress Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Fancy Dress Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Fancy Dress Girls</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Monoact Boys</td>
-                            <td style="color:#fff;background-color: #000;" >Monoact Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Monoact Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Monoact Girls</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Mimicry Boys</td>
-                            <td style="color:#fff;background-color: #000;" >Mimicry Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Mimicry Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Mimicry Girls</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Kadhaprasangam</td>
-                            <td style="color:#fff;background-color: #000;" >Shakespearean Monologues</td>
+                            <td style="color:#000;background-color: #fff;" >Kadhaprasangam</td>
+                            <td style="color:#000;background-color: #fff;" >Shakespearean Monologues</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Elocution Malayalam</td>
-                            <td style="color:#fff;background-color: #000;" >Elocution English</td>
+                            <td style="color:#000;background-color: #fff;" >Elocution Malayalam</td>
+                            <td style="color:#000;background-color: #fff;" >Elocution English</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Elocution Telugu</td>
-                            <td style="color:#fff;background-color: #000;" >Elocution Sanskrit</td>
+                            <td style="color:#000;background-color: #fff;" >Elocution Telugu</td>
+                            <td style="color:#000;background-color: #fff;" >Elocution Sanskrit</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Recitation English</td>
-                            <td style="color:#fff;background-color: #000;" >Recitation Malayalam</td>
+                            <td style="color:#000;background-color: #fff;" >Recitation English</td>
+                            <td style="color:#000;background-color: #fff;" >Recitation Malayalam</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Recitation Hindi</td>
-                            <td style="color:#fff;background-color: #000;" >Recitation Telugu</td>
+                            <td style="color:#000;background-color: #fff;" >Recitation Hindi</td>
+                            <td style="color:#000;background-color: #fff;" >Recitation Telugu</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Recitation Sanskrit</td>
-                            <td style="color:#fff;background-color: #000;" >Classical Music Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Recitation Sanskrit</td>
+                            <td style="color:#000;background-color: #fff;" >Classical Music Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Classical Music Girls</td>
-                            <td style="color:#fff;background-color: #000;" >Light Music Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Classical Music Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Light Music Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Light Music Girls</td>
-                            <td style="color:#fff;background-color: #000;" >Western Solo Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Light Music Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Western Solo Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Western Solo girls</td>
-                            <td style="color:#fff;background-color: #000;" >Instrument Percussion</td>
+                            <td style="color:#000;background-color: #fff;" >Western Solo girls</td>
+                            <td style="color:#000;background-color: #fff;" >Instrument Percussion</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Instrument Wind</td>
-                            <td style="color:#fff;background-color: #000;" >Instrument String</td>
+                            <td style="color:#000;background-color: #fff;" >Instrument Wind</td>
+                            <td style="color:#000;background-color: #fff;" >Instrument String</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Instrument Piano</td>
-                            <td style="color:#fff;background-color: #000;" >Karokae Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Instrument Piano</td>
+                            <td style="color:#000;background-color: #fff;" >Karokae Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Karokae Girls</td>
-                            <td style="color:#fff;background-color: #000;" >Ashtapadi Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Karokae Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Ashtapadi Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Ashtapadi Girls</td>
-                            <td style="color:#fff;background-color: #000;" >Mappilapattu Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Ashtapadi Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Mappilapattu Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Mappilapattu Girls</td>
-                            <td style="color:#fff;background-color: #000;" >Kadhakali Sangeetham Boys</td>
+                            <td style="color:#000;background-color: #fff;" >Mappilapattu Girls</td>
+                            <td style="color:#000;background-color: #fff;" >Kadhakali Sangeetham Boys</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Kadhakali Sangeetham Girls</td>
-                            <td style="color:#fff;background-color: #000;" ></td>
+                            <td style="color:#000;background-color: #fff;" >Kadhakali Sangeetham Girls</td>
+                            <td style="color:#000;background-color: #fff;" ></td>
                         </tr>
                     </table>
                     </div>
@@ -242,40 +244,40 @@ body, html {
     </div>
     <div id="f2" class="tab-pane fade">
         <div class="panel panel-default">
-            <div class="panel-body slideanim" style="background-color:#000;">
+            <div class="panel-body slideanim" style="background-color:#fff;">
                     <div style=" color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #000;">
+                        <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #fff;">
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Story Writing English</td>
-                            <td style="color:#fff;background-color: #000;" >Story Writing Malayalam</td>
+                            <td style="color:#000;background-color: #fff;" >Story Writing English</td>
+                            <td style="color:#000;background-color: #fff;" >Story Writing Malayalam</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Essay Writing English</td>
-                            <td style="color:#fff;background-color: #000;" >Essay Writing Malayalam</td>
+                            <td style="color:#000;background-color: #fff;" >Essay Writing English</td>
+                            <td style="color:#000;background-color: #fff;" >Essay Writing Malayalam</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Essay Writing Tamil</td>
-                            <td style="color:#fff;background-color: #000;" >Poetry Writing English</td>
+                            <td style="color:#000;background-color: #fff;" >Essay Writing Tamil</td>
+                            <td style="color:#000;background-color: #fff;" >Poetry Writing English</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Poetry Writing Malayalam</td>
-                            <td style="color:#fff;background-color: #000;" >Poetry Writing Telugu</td>
+                            <td style="color:#000;background-color: #fff;" >Poetry Writing Malayalam</td>
+                            <td style="color:#000;background-color: #fff;" >Poetry Writing Telugu</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Hindi Essay</td>
-                            <td style="color:#fff;background-color: #000;" >Water Coloring</td>
+                            <td style="color:#000;background-color: #fff;" >Hindi Essay</td>
+                            <td style="color:#000;background-color: #fff;" >Water Coloring</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Cartooning</td>
-                            <td style="color:#fff;background-color: #000;" >Pencil Drawing</td>
+                            <td style="color:#000;background-color: #fff;" >Cartooning</td>
+                            <td style="color:#000;background-color: #fff;" >Pencil Drawing</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Paper collage</td>
-                            <td style="color:#fff;background-color: #000;" >Face Painting</td>
+                            <td style="color:#000;background-color: #fff;" >Paper collage</td>
+                            <td style="color:#000;background-color: #fff;" >Face Painting</td>
                         </tr>
                         <tr>
-                            <td style="color:#fff;background-color: #000;" >Rangoli</td>
-                            <td style="color:#fff;background-color: #000;" >Clay Modeling</td>
+                            <td style="color:#000;background-color: #fff;" >Rangoli</td>
+                            <td style="color:#000;background-color: #fff;" >Clay Modeling</td>
                         </tr>
                     </table>
                     </div>
@@ -378,7 +380,7 @@ body, html {
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64  w3-hover-opacity-off slideanim">
   <div class="w3-large w3-section ">
-  <p> Copyright © 2017 | All rights reserved |Developed by <a href="{{ url('/webteam') }}" title="W3.CSS" target="_blank" class="w3-hover-text-green">Web Team</a></p>
+  <p> Copyright © Amrita Kalotsavam 2017 | All rights reserved </p>
   </div>
 </footer>
 
@@ -452,9 +454,16 @@ var x = setInterval(function() {
     // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "it's time to explore your talents";
+        document.getElementById("demo").innerHTML = "It's time to explore your talents";
     }
 }, 1000);
 </script>
+<style>
+@media only screen and (max-width: 768px) {
+    .bgimg-1{
+        background-position-x: -350px;
+    }
+}
+</style>
 </body>
 </html>
