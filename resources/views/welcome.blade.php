@@ -95,6 +95,7 @@ body, html {
     }
   }
 
+
 </style>
 <script src="{{ asset('js/app.js') }}"></script>
 <body>
@@ -127,8 +128,10 @@ body, html {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle " style="white-space:nowrap;">
-    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:50px;">Amrita Kalotsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
+  <div class="w3-display-middle w3-black " style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge  w3-xlarge w3-wide w3-animate-opacity main-heading" style="font-size:51px; ">Amrita Kalotsavam <span class="w3-hide-small glyphicon glyphicon-star-empty" aria-hidden="true">2k17</span></span>
+    <br>
+    <p class="w3-center" style="font-family: 'Righteous', cursive; color:#fff; font-size:20px" id="demo"></p>
   </div>
 </div>
 
@@ -307,7 +310,7 @@ body, html {
     <div role="tabpanel" class="tab-pane">
             <h1 class="text-center">
                 <span style="color:#a5011f">
-                
+
                 </span>
             </h1>
             <br><br>
@@ -420,7 +423,38 @@ $(window).scroll(function() {
       }
   });
 });
+
 </script>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 9, 2017 16:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML ="Launches in : "+ hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "it's time to explore your talents";
+    }
+}, 1000);
+</script>
 </body>
 </html>
