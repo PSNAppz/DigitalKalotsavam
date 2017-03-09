@@ -13,6 +13,7 @@ use App\DisqualifiedList as DL;
 use Mail;
 use App\MailConfirm as Confirm;
 use App\ScoreBoard as Score;
+use App\PublicScore as PS;
 
 
 class AdminController extends Controller
@@ -32,6 +33,20 @@ class AdminController extends Controller
       $sup = Support::where('replied','0')->orderBy('id','desc')->get();
       $dl = DL::get();
       return view('Admin.home')->withSup($sup)->withDl($dl);
+    }
+
+    /**
+     * Show the Public Score Board
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showScore(){
+      $amritamayi = PS::where('house','Amritamayi')->get();
+      $jyothirmayi= PS::where('house','Jyothirmayi')->get();
+      $anandamayi= PS::where('house','Anandamayi')->get();
+      $chinmayi= PS::where('house','Chinmayi')->get();
+
+      return view('scoreboard.index')->withAmritamayi($amritamayi)->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)->withChinmayi($chinmayi);
     }
     /**
      * Show the Team Management Page.
