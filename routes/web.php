@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('scoreboard', function () {
+    return view('scoreboard.index');
+});
+
 Auth::routes(['except' => ['register']]);
 Route::get('/register', function () {
     return view('welcome');

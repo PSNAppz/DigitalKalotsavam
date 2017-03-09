@@ -20,7 +20,7 @@ class CreateMailConfirmsTable extends Migration
             $table->foreign('rollno')
             ->references('rollno')->on('students')
             ->onDelete('cascade')->onUpdate('cascade');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('secret')->unique();
             $table->timestamps();
         });
