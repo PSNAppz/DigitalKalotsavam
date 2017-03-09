@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Event;
 
 class EventsTableSeeder extends Seeder
 {
@@ -11,6 +12,7 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
+      Event::truncate();
       DB::table('events')->insert([
         [
           'name' => 'classical_dance_boys',
