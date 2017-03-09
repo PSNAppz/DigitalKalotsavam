@@ -388,9 +388,62 @@
                 <div class="panel-body">
                     <form class="dropdown" action="/registrations/" method="get">
                         <select name="sort" id="sort" onchange="this.form.submit()">
-                            <option value="">Select an Item</option>
-                            <option value="classical_dance_boys">Classical Dance Boys</option>
-                            <option value="classical_dance_girls">Classical Dance Girls</option>
+                          <option value="">Select an Item</option>
+                          <option value="classical_dance_boys">Classical Dance Boys</option>
+                          <option value="classical_dance_girls">Classical Dance Girls</option>
+                          <option value="semi_classical_dance_boys">Semi classical dance boys</option>
+                          <option value="semi_classical_dance_girls">Semi classical dance girls</option>
+                          <option value="fancy_dress_boys">Fancy dress boys</option>
+                          <option value="fancy_dress_girls">Fancy dress girls</option>
+                          <option value="monoact_boys">Monoact boys</option>
+                          <option value="monoact_girls">Monoact girls</option>
+                          <option value="mimicry_boys">Mimicry boys</option>
+                          <option value="mimicry_girls">Mimicry girls</option>
+                          <option value="kadhaprasangam">Kadhaprasangam</option>
+                          <option value="shakespearean_monologue">Shakespearean monologue</option>
+                          <option value="elocution_malayalam">Elocution malayalam</option>
+                          <option value="elocution_english">Elocution english</option>
+                          <option value="elocution_telugu">Elocution telugu</option>
+                          <option value="elocution_sanskrit">Elocution sanskrit</option>
+                          <option value="recitation_english">Recitation english</option>
+                          <option value="recitation_malayalam">Recitation malayalam</option>
+                          <option value="recitation_hindi">Recitation hindi</option>
+                          <option value="recitation_telugu">Recitation telugu</option>
+                          <option value="recitation_sanskrit">Recitation sanskrit</option>
+                          <option value="classical_music_boys">Classical music boys</option>
+                          <option value="classical_music_girls">classical music girls</option>
+                          <option value="light_music_boys">Light music boys</option>
+                          <option value="light_music_girls">Light music girls</option>
+                          <option value="western_solo_boys">Western solo boys</option>
+                          <option value="western_solo_girls">Western solo girls</option>
+                          <option value="instrument_percussion">Instrument percussion</option>
+                          <option value="instrument_wind">Instrument wind</option>
+                          <option value="instrument_string">Instrument string</option>
+                          <option value="instrument_piano">Instrument piano</option>
+                          <option value="karaoke_boys">Karaoke boys</option>
+                          <option value="karaoke_girls">Karaoke girls</option>
+                          <option value="ashtapadi_boys">Ashtapadi boys</option>
+                          <option value="ashtapadi_girls">Ashtapadi girls</option>
+                          <option value="mappilapattu_boys">Mappilapattu boys</option>
+                          <option value="mappilapattu_girls">Mappilapattu girls</option>
+                          <option value="Kadhakali_sangeetham_boys">Kadhakali sangeetham boys</option>
+                          <option value="Kadhakali sangeetham girls">Kadhakali sangeetham girls</option>
+                          <option value="story_writing_english">Story writing english</option>
+                          <option value="story_writing_malayalam">Story writing malayalam</option>
+                          <option value="essay_writing_english">Essay writing english</option>
+                          <option value="essay_writing_malayalam">Essay writing malayalam</option>
+                          <option value="essay_writing_tamil">Essay writing tamil</option>
+                          <option value="poetry_writing_english">Poetry writing english</option>
+                          <option value="poetry_writing_malayalam">Poetry writing malayalam</option>
+                          <option value="poetry_writing_telugu">Poetry writing telugu</option>
+                          <option value="hindi_essay">Hindi essay</option>
+                          <option value="water_coloring">Water coloring</option>
+                          <option value="cartooning">Cartooning</option>
+                          <option value="pencil_drawing">Pencil drawing</option>
+                          <option value="paper_collage">Paper collage</option>
+                          <option value="face_painting">Face painting</option>
+                          <option value="rangoli">Rangoli</option>
+                          <option value="clay_modeling">Clay modeling</option>
                         </select>
                     </form>
                     <br>
