@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Optional theme -->
-<title>Kalolsavam 2k17 </title>
+<title>Kalotsavam 2k17 </title>
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -452,7 +452,7 @@ var x = setInterval(function() {
     // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "it's time to explore your talents";
+        document.getElementById("demo").innerHTML = "It's time to explore your talents";
     }
 }, 1000);
 </script>
