@@ -26,47 +26,21 @@
                         <table id="registration" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Owner</th>
-                                <th>Email</th>
-                                <th>Classical dance boys</th>
-                                <th>Classical dance girls</th>
-                                <th>Semi classical dance boys</th>
-                                <th>Semi classical dance girls</th>
-
-                                <th>Total Events</th>
-
+                                <th>File Name</th>
+                                <th>Uploaded At</th>
                               </tr>
                             </thead>
                             <tbody>
                                 <!-- Foreach -->
-                                @foreach($stud as $s)
-                                    @php $total=0; @endphp
+                                @foreach($uploads as $up)
                                     <tr>
-                                    <th>{{$s->name}}</th>
-                                    <th>{{$s->rollno}}</th>
-                                    <th>{{$s->email}}</th>
-                                    <th>@if ($s->classical_dance_boys)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    @endif</th>
-
-                                    <th>@if ($s->classical_dance_girls)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    @endif</th>
-
-                                    <th>@if ($s->semi_classical_dance_boys)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    @endif</th>
-
-                                    <th>@if ($s->semi_classical_dance_girls)
-                                        @php $total++; @endphp
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                    @endif</th>
-
-                                    <th>@php echo $total; @endphp</th>
+                                    <th>{{$up->id}}</th>
+                                    <th>{{$up->name}}</th>
+                                    <th>{{$up->owner}}</th>
+                                    <th>{{$up->created_at}}</th>
                                     </tr>
                                 @endforeach
                                     <!-- End -->

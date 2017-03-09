@@ -86,7 +86,6 @@
                                 <th>Face painting</th>
                                 <th>Rangoli</th>
                                 <th>Clay modeling</th>
-
                                 <th>Total Events</th>
 
                               </tr>
