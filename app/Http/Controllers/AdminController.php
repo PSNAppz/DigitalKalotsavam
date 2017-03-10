@@ -46,6 +46,8 @@ class AdminController extends Controller
       $anandamayi= PS::where('house','Anandamayi')->get();
       $chinmayi= PS::where('house','Chinmayi')->get();
 
+      
+
       return view('scoreboard.index')->withAmritamayi($amritamayi)->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)->withChinmayi($chinmayi);
     }
     /**

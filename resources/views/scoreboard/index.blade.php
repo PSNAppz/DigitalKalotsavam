@@ -179,9 +179,10 @@ h2 strong {
 
 
 <div class="wrap">
-  <h1>fscore <strong>Board</strong></h1>
+  <h1>SCORE <strong>Board</strong></h1>
 
-  <div class="countdown">
+  <div class="countdown"  style="
+    margin-left: 620px;">
     <div class="bloc-time hours" data-init-value="24">
       <span class="count-title">Amritamayi</span>
 
@@ -197,16 +198,27 @@ h2 strong {
       </div>
 
       <div class="figure hours hours-2">
-        <span class="top">{{$amritamayi[0]->fscore}}</span>
+        <span class="top">{{$amritamayi[0]->sscore}}</span>
         <span class="top-back">
-          <span>{{$amritamayi[0]->fscore}}</span>
+          <span>{{$amritamayi[0]->sscore}}</span>
         </span>
-        <span class="bottom">{{$amritamayi[0]->fscore}}</span>
+        <span class="bottom">{{$amritamayi[0]->sscore}}</span>
         <span class="bottom-back">
-          <span>{{$amritamayi[0]->fscore}}</span>
+          <span>{{$amritamayi[0]->sscore}}</span>
         </span>
       </div>
+
+    <div class="figure hours hours-3">
+      <span class="top">{{$amritamayi[0]->sscore}}</span>
+      <span class="top-back">
+        <span>{{$amritamayi[0]->sscore}}</span>
+      </span>
+      <span class="bottom">{{$amritamayi[0]->sscore}}</span>
+      <span class="bottom-back">
+        <span>{{$amritamayi[0]->sscore}}</span>
+      </span>
     </div>
+  </div>
 
     <div class="bloc-time hours" data-init-value="24">
       <span class="count-title">Jyothirmayi</span>
@@ -223,13 +235,24 @@ h2 strong {
       </div>
 
       <div class="figure hours hours-2">
-        <span class="top">{{$jyothirmayi[0]->fscore}}</span>
+        <span class="top">{{$jyothirmayi[0]->sscore}}</span>
         <span class="top-back">
-          <span>{{$jyothirmayi[0]->fscore}}</span>
+          <span>{{$jyothirmayi[0]->sscore}}</span>
         </span>
-        <span class="bottom">{{$jyothirmayi[0]->fscore}}</span>
+        <span class="bottom">{{$jyothirmayi[0]->sscore}}</span>
         <span class="bottom-back">
-          <span>{{$jyothirmayi[0]->fscore}}</span>
+          <span>{{$jyothirmayi[0]->sscore}}</span>
+        </span>
+      </div>
+
+      <div class="figure hours hours-3">
+        <span class="top">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="top-back">
+          <span>{{$jyothirmayi[0]->sscore}}</span>
+        </span>
+        <span class="bottom">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="bottom-back">
+          <span>{{$jyothirmayi[0]->sscore}}</span>
         </span>
       </div>
     </div>
@@ -249,13 +272,23 @@ h2 strong {
       </div>
 
       <div class="figure min min-2">
-       <span class="top">{{$anandamayi[0]->fscore}}</span>
+       <span class="top">{{$anandamayi[0]->sscore}}</span>
         <span class="top-back">
-          <span>{{$anandamayi[0]->fscore}}</span>
+          <span>{{$anandamayi[0]->sscore}}</span>
         </span>
-        <span class="bottom">{{$anandamayi[0]->fscore}}</span>
+        <span class="bottom">{{$anandamayi[0]->sscore}}</span>
         <span class="bottom-back">
-          <span>{{$anandamayi[0]->fscore}}</span>
+          <span>{{$anandamayi[0]->sscore}}</span>
+        </span>
+      </div>
+      <div class="figure min min-3">
+       <span class="top">{{$anandamayi[0]->sscore}}</span>
+        <span class="top-back">
+          <span>{{$anandamayi[0]->sscore}}</span>
+        </span>
+        <span class="bottom">{{$anandamayi[0]->sscore}}</span>
+        <span class="bottom-back">
+          <span>{{$anandamayi[0]->sscore}}</span>
         </span>
       </div>
     </div>
@@ -277,16 +310,27 @@ h2 strong {
       </div>
 
       <div class="figure sec sec-2">
-        <span class="top">{{$chinmayi[0]->fscore}}</span>
+        <span class="top">{{$chinmayi[0]->sscore}}</span>
         <span class="top-back">
-          <span>{{$chinmayi[0]->fscore}}</span>
+          <span>{{$chinmayi[0]->sscore}}</span>
         </span>
-        <span class="bottom">{{$chinmayi[0]->fscore}}</span>
+        <span class="bottom">{{$chinmayi[0]->sscore}}</span>
         <span class="bottom-back">
-          <span>{{$chinmayi[0]->fscore}}</span>
+          <span>{{$chinmayi[0]->sscore}}</span>
+        </span>
+      </div>
+      <div class="figure sec sec-2">
+        <span class="top">{{$chinmayi[0]->sscore}}</span>
+        <span class="top-back">
+          <span>{{$chinmayi[0]->sscore}}</span>
+        </span>
+        <span class="bottom">{{$chinmayi[0]->sscore}}</span>
+        <span class="bottom-back">
+          <span>{{$chinmayi[0]->sscore}}</span>
         </span>
       </div>
     </div>
   </div>
 </div>
 @endsection
+<script src="{{ asset('js/app.js') }}"></script>

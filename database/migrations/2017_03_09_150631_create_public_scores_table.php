@@ -18,6 +18,7 @@ class CreatePublicScoresTable extends Migration
             $table->string('house');
             $table->integer('fscore')->default(0);
             $table->integer('sscore')->default(0);
+            $table->integer('total')->default(0);
             $table->timestamps();
         });
     }
