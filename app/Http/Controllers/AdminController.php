@@ -14,7 +14,7 @@ use Mail;
 use App\MailConfirm as Confirm;
 use App\ScoreBoard as Score;
 use App\PublicScore as PS;
-
+use ConsoleTVs\Charts\Facades\Charts;
 
 class AdminController extends Controller
 {
@@ -45,10 +45,16 @@ class AdminController extends Controller
       $jyothirmayi= PS::where('house','Jyothirmayi')->get();
       $anandamayi= PS::where('house','Anandamayi')->get();
       $chinmayi= PS::where('house','Chinmayi')->get();
+      $pie =Charts::create('pie', 'fusioncharts')
+      ->title('Score Analytics')
+      ->labels(['Amritamayi', 'Jyothirmayi', 'Anandamayi','Chinmayi'])
+      ->values([$amritamayi[0]->total,$jyothirmayi[0]->total,$anandamayi[0]->total,$chinmayi[0]->total])
+      ->dimensions(650,500)
+      ->responsive(false);
 
-      
-
-      return view('scoreboard.index')->withAmritamayi($amritamayi)->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)->withChinmayi($chinmayi);
+      return view('scoreboard.index')->withAmritamayi($amritamayi)
+      ->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)
+      ->withChinmayi($chinmayi)->withPie($pie);
     }
     /**
      * Show the Team Management Page.
@@ -594,7 +600,7 @@ class AdminController extends Controller
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
-                $Dl->type="Multiple Off Stage Group";
+                $Dl->type="Face Painting and Paper Collage";
                 if($std->house==1){
                     $Dl->house="Amritamayi";
                 }
@@ -612,6 +618,9 @@ class AdminController extends Controller
         }
         return redirect()->back();
 
+    }
+    public function publishForm(){
+      return view('scoreboard.publish');
     }
     public function valform(){
         $true=0;
