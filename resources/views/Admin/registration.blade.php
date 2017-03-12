@@ -387,7 +387,8 @@
                 <div class="panel-heading"><i class="fa fa-sort" aria-hidden="true"></i> Sort Data<span class="badge"></span></div>
                 <div class="panel-body">
                     <form class="dropdown" action="/registrations/" method="get">
-                        <select name="sort" id="sort" onchange="this.form.submit()">
+
+                      <select name="sort" id="sort" onchange="this.form.submit()">
                           <option value="">Select an Item</option>
                           <option value="classical_dance_boys">Classical Dance Boys</option>
                           <option value="classical_dance_girls">Classical Dance Girls</option>
@@ -444,7 +445,12 @@
                           <option value="face_painting">Face painting</option>
                           <option value="rangoli">Rangoli</option>
                           <option value="clay_modeling">Clay modeling</option>
+<<<<<<< HEAD
                         </select>
+=======
+
+                      </select>
+>>>>>>> origin/master
                     </form>
                     <br>
                     @if($count)<h4> Total Participants for {{$name}} : {{$count}}</h4>@endif

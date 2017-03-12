@@ -14,10 +14,10 @@ class CategoriesTableSeeder extends Seeder
     {
 
         Category::truncate();
-        DB::table('categories')->insert(
+        DB::table('categories')->insert([
           ['name' => 'Onstage'],
           ['name' => 'Offstage'],
-          ['name' => 'Group']
+          ['name' => 'Group']]
         );
     }
 }
