@@ -124,6 +124,8 @@
                 <div class="panel-heading">Score Board<span class="badge"></span></div>
                 <div class="panel-body">
                 <a class="btn btn-primary" href="/scoreboard">View Scoreboard</a>
+                <a class="btn btn-success" href="/score">View Mob Scoreboard</a>
+
                 </div>
             </div>
         </div>

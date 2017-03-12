@@ -48,6 +48,14 @@ class HomeController extends Controller
         $sup->update();
         return redirect()->back();
       }
+
+      public function removeupload($id){
+         $up=Upload::findOrfail($id);
+         if($up->owner == Auth::User()->id){
+           $up->delete();
+        }
+         return redirect()->back();
+       }
     /**
      * Show the Team Management Page.
      *
@@ -83,7 +91,8 @@ class HomeController extends Controller
     }
     public function viewUpload(){
         $success=0;
-        return view('upload')->withSuccess($success);
+        $uploads=Upload::where('owner',Auth::User()->id)->get();
+        return view('upload')->withSuccess($success)->withUploads($uploads);
     }
 
     public function upload(Request $request){
@@ -93,7 +102,7 @@ class HomeController extends Controller
         if (Input::file('files')->isValid()) {
         $destinationPath = 'files'; // upload path
         $extension = Input::file('files')->getClientOriginalExtension(); // getting file extension
-        $fileName = uniqid().'.'.$extension; // renameing
+        $fileName = uniqid().'Owner'.Auth::User()->id.'.'.$extension; // renameing
         Input::file('files')->move($destinationPath, $fileName);
         $success=1;
         $file->name = $title;
@@ -101,6 +110,7 @@ class HomeController extends Controller
         $file->location=$fileName;
         $file->save();
       }
-     return view('upload')->withSuccess($success);
+        $uploads=Upload::where('owner',Auth::User()->id)->get();
+     return view('upload')->withSuccess($success)->withUploads($uploads);
     }
 }
