@@ -384,18 +384,17 @@ h2 strong {
 </div>
 <div class=" col-md-3" style="margin-left:-280px; margin-top:100px;width:30%">
       <div class="panel panel-default">
-        <div class="panel-heading">News</div>
+        <div class="panel-heading">Winners</div>
         <div class="panel-body" style="height:50%;">
            <b><marquee direction="up" style="height:100%; font-size:30px;">
              @foreach($ann as $a)
+             @if($a->type==2)
              <div class="panel panel-default">
-               <div class="panel-body"> @if($a->type==2)
+               <div class="panel-body">
                  <i class="fa fa-trophy" aria-hidden="true"></i>
-                   @else
-                   <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                   @endif
                    {{$a->announcement}}</div>
-             </div>
+              </div>
+              @endif
              @endforeach
               </marquee></b>
         </div>
@@ -405,9 +404,14 @@ h2 strong {
 <br>
 <br>
 <div class="alert alert-info" role="alert" style="padding-top: 0px;width:100%;padding-bottom:75px;font-size:45px;margin-bottom:0px;height:0px;position:fixed;bottom:0;">
-  <b><marquee direction="right"><span class="label label-success"> <i class="fa fa-cutlery fa-sm" aria-hidden="true"></i>
-</span>  Refreshments available @ X Counter.
- </marquee></b>
+  @foreach($ann as $a)
+    @if($a->type!=2)
+      <b><marquee direction="right"><span class="label label-success"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Updates</span>
+      {{$a->announcement}}
+
+      </marquee></b>
+    @endif
+ @endforeach
 </div>
 
 @endsection
