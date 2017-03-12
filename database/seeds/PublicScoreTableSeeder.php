@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\PublicScore;
-class PublicScoreSeeder extends Seeder
+class PublicScoreTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
