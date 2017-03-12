@@ -14,7 +14,8 @@ use Mail;
 use App\MailConfirm as Confirm;
 use App\ScoreBoard as Score;
 use App\PublicScore as PS;
-
+use ConsoleTVs\Charts\Facades\Charts;
+use App\Announcement as Ann;
 
 class AdminController extends Controller
 {
@@ -32,9 +33,40 @@ class AdminController extends Controller
     {
       $sup = Support::where('replied','0')->orderBy('id','desc')->get();
       $dl = DL::get();
-      return view('Admin.home')->withSup($sup)->withDl($dl);
+      $an= Ann::get();
+      return view('Admin.home')->withSup($sup)->withDl($dl)->withAn($an);
     }
+    /**
+     * View add announcements form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+     public function viewann(){
+       return view('Admin.ann');
+     }
 
+    /**
+     * Add announcements.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function announcements(Request $req){
+      $ann = new Ann();
+      $ann->announcement=$req->input('msg');
+      $ann->type=$req->input('type');
+      $ann->save();
+      return redirect()->route('admin');
+    }
+    /**
+     * Delete announcements.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function delann($id){
+      $ann = Ann::findOrfail($id);
+      $ann->delete();
+      return redirect()->back();
+    }
     /**
      * Show the Public Score Board
      *
@@ -45,10 +77,18 @@ class AdminController extends Controller
       $jyothirmayi= PS::where('house','Jyothirmayi')->get();
       $anandamayi= PS::where('house','Anandamayi')->get();
       $chinmayi= PS::where('house','Chinmayi')->get();
+      $ann= Ann::get();
+      $pie =Charts::create('pie', 'fusioncharts')
+      ->title('Score Analytics')
+      ->labels(['Amritamayi', 'Jyothirmayi', 'Anandamayi','Chinmayi'])
+      ->values([$amritamayi[0]->total,$jyothirmayi[0]->total,$anandamayi[0]->total,$chinmayi[0]->total])
+      ->dimensions(650,500)
+      ->colors(['#00B0FF', '#F9A825','#EC407A','#8BC34A'])
+      ->responsive(false);
 
-      
-
-      return view('scoreboard.index')->withAmritamayi($amritamayi)->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)->withChinmayi($chinmayi);
+      return view('scoreboard.index')->withAmritamayi($amritamayi)
+      ->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)
+      ->withChinmayi($chinmayi)->withPie($pie)->withAnn($ann);
     }
     /**
      * Show the Team Management Page.
@@ -594,7 +634,7 @@ class AdminController extends Controller
                 $Dl=new DL();
                 $Dl->name=$std->name;
                 $Dl->rollno=$std->rollno;
-                $Dl->type="Multiple Off Stage Group";
+                $Dl->type="Face Painting and Paper Collage";
                 if($std->house==1){
                     $Dl->house="Amritamayi";
                 }
@@ -612,6 +652,9 @@ class AdminController extends Controller
         }
         return redirect()->back();
 
+    }
+    public function publishForm(){
+      return view('scoreboard.publish');
     }
     public function valform(){
         $true=0;
