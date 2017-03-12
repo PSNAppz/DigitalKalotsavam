@@ -53,8 +53,9 @@ h2 strong {
   text-align: center;
   margin-left: 115px;
 }
-.countdown .bloc-time:last-child {
+.countdown .bloc-time {
   margin-right: 0;
+  margin-top: 20px;
 }
 .countdown .count-title {
   display: block;
@@ -184,9 +185,10 @@ h2 strong {
 {!! Charts::assets() !!}
 
 
-<div class="row">
+<div class="row" style="margin-left:0px;margin-right:0px;">
   <h1>SCORE <strong>Board</strong></h1>
   <div class="col-md-3" style="margin-left: 50px; margin-top:100px;">
+
     {!! $pie->render() !!}
   </div>
   <div class="col-md-6">
@@ -217,23 +219,23 @@ h2 strong {
       </div>
 
     <div class="figure hours hours-3">
-      <span class="top">{{$amritamayi[0]->sscore}}</span>
+      <span class="top">{{$amritamayi[0]->tscore}}</span>
       <span class="top-back">
-        <span>{{$amritamayi[0]->sscore}}</span>
+        <span>{{$amritamayi[0]->tscore}}</span>
       </span>
-      <span class="bottom">{{$amritamayi[0]->sscore}}</span>
+      <span class="bottom">{{$amritamayi[0]->tscore}}</span>
       <span class="bottom-back">
-        <span>{{$amritamayi[0]->sscore}}</span>
+        <span>{{$amritamayi[0]->tscore}}</span>
       </span>
     </div>
     <div class="figure hours hours-4">
-      <span class="top">{{$amritamayi[0]->sscore}}</span>
+      <span class="top">{{$amritamayi[0]->foscore}}</span>
       <span class="top-back">
-        <span>{{$amritamayi[0]->sscore}}</span>
+        <span>{{$amritamayi[0]->foscore}}</span>
       </span>
-      <span class="bottom">{{$amritamayi[0]->sscore}}</span>
+      <span class="bottom">{{$amritamayi[0]->foscore}}</span>
       <span class="bottom-back">
-        <span>{{$amritamayi[0]->sscore}}</span>
+        <span>{{$amritamayi[0]->foscore}}</span>
       </span>
     </div>
   </div>
@@ -264,23 +266,23 @@ h2 strong {
       </div>
 
       <div class="figure hours hours-3">
-        <span class="top">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="top">{{$jyothirmayi[0]->tscore}}</span>
         <span class="top-back">
-          <span>{{$jyothirmayi[0]->sscore}}</span>
+          <span>{{$jyothirmayi[0]->tscore}}</span>
         </span>
-        <span class="bottom">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="bottom">{{$jyothirmayi[0]->tscore}}</span>
         <span class="bottom-back">
-          <span>{{$jyothirmayi[0]->sscore}}</span>
+          <span>{{$jyothirmayi[0]->tscore}}</span>
         </span>
       </div>
       <div class="figure hours hours-4">
-        <span class="top">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="top">{{$jyothirmayi[0]->foscore}}</span>
         <span class="top-back">
-          <span>{{$jyothirmayi[0]->sscore}}</span>
+          <span>{{$jyothirmayi[0]->foscore}}</span>
         </span>
-        <span class="bottom">{{$jyothirmayi[0]->sscore}}</span>
+        <span class="bottom">{{$jyothirmayi[0]->foscore}}</span>
         <span class="bottom-back">
-          <span>{{$jyothirmayi[0]->sscore}}</span>
+          <span>{{$jyothirmayi[0]->foscore}}</span>
         </span>
       </div>
     </div>
@@ -310,23 +312,23 @@ h2 strong {
         </span>
       </div>
       <div class="figure min min-3">
-       <span class="top">{{$anandamayi[0]->sscore}}</span>
+       <span class="top">{{$anandamayi[0]->tscore}}</span>
         <span class="top-back">
-          <span>{{$anandamayi[0]->sscore}}</span>
+          <span>{{$anandamayi[0]->tscore}}</span>
         </span>
-        <span class="bottom">{{$anandamayi[0]->sscore}}</span>
+        <span class="bottom">{{$anandamayi[0]->tscore}}</span>
         <span class="bottom-back">
-          <span>{{$anandamayi[0]->sscore}}</span>
+          <span>{{$anandamayi[0]->tscore}}</span>
         </span>
       </div>
       <div class="figure min min-4">
-       <span class="top">{{$anandamayi[0]->sscore}}</span>
+       <span class="top">{{$anandamayi[0]->foscore}}</span>
         <span class="top-back">
-          <span>{{$anandamayi[0]->sscore}}</span>
+          <span>{{$anandamayi[0]->foscore}}</span>
         </span>
-        <span class="bottom">{{$anandamayi[0]->sscore}}</span>
+        <span class="bottom">{{$anandamayi[0]->foscore}}</span>
         <span class="bottom-back">
-          <span>{{$anandamayi[0]->sscore}}</span>
+          <span>{{$anandamayi[0]->foscore}}</span>
         </span>
       </div>
     </div>
@@ -358,37 +360,55 @@ h2 strong {
         </span>
       </div>
       <div class="figure sec sec-3">
-        <span class="top">{{$chinmayi[0]->sscore}}</span>
+        <span class="top">{{$chinmayi[0]->tscore}}</span>
         <span class="top-back">
-          <span>{{$chinmayi[0]->sscore}}</span>
+          <span>{{$chinmayi[0]->tscore}}</span>
         </span>
-        <span class="bottom">{{$chinmayi[0]->sscore}}</span>
+        <span class="bottom">{{$chinmayi[0]->tscore}}</span>
         <span class="bottom-back">
-          <span>{{$chinmayi[0]->sscore}}</span>
+          <span>{{$chinmayi[0]->tscore}}</span>
         </span>
       </div>
       <div class="figure sec sec-4">
-        <span class="top">{{$chinmayi[0]->sscore}}</span>
+        <span class="top">{{$chinmayi[0]->foscore}}</span>
         <span class="top-back">
-          <span>{{$chinmayi[0]->sscore}}</span>
+          <span>{{$chinmayi[0]->foscore}}</span>
         </span>
-        <span class="bottom">{{$chinmayi[0]->sscore}}</span>
+        <span class="bottom">{{$chinmayi[0]->foscore}}</span>
         <span class="bottom-back">
-          <span>{{$chinmayi[0]->sscore}}</span>
+          <span>{{$chinmayi[0]->foscore}}</span>
         </span>
       </div>
     </div>
   </div>
 </div>
-<div class="col-md-2" style="margin-right: 1px; margin-top:100px;">
-  <marquee direction="up" s>This text will scroll from bottom to up</marquee>
+<div class=" col-md-3" style="margin-left:-280px; margin-top:100px;width:30%">
+      <div class="panel panel-default">
+        <div class="panel-heading">News</div>
+        <div class="panel-body" style="height:50%;">
+           <b><marquee direction="up" style="height:100%; font-size:30px;">
+             @foreach($ann as $a)
+             <div class="panel panel-default">
+               <div class="panel-body"> @if($a->type==2)
+                 <i class="fa fa-trophy" aria-hidden="true"></i>
+                   @else
+                   <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                   @endif
+                   {{$a->announcement}}</div>
+             </div>
+             @endforeach
+              </marquee></b>
+        </div>
+      </div>
+</div>
+</div>
+<br>
+<br>
+<div class="alert alert-info" role="alert" style="padding-top: 0px;width:100%;padding-bottom:75px;font-size:45px;margin-bottom:0px;height:0px;position:fixed;bottom:0;">
+  <b><marquee direction="right"><span class="label label-success"> <i class="fa fa-cutlery fa-sm" aria-hidden="true"></i>
+</span>  Refreshments available @ X Counter.
+ </marquee></b>
+</div>
 
-</div>
-</div>
-<br>
-<br>
-<div class="alert alert-info" role="alert" style="margin-bottom:-10000px;padding-bottom:70px;font-size:50px;">
-  <b><marquee direction="right">This text will scroll </marquee></b>
-</div>
 @endsection
 <script src="{{ asset('js/app.js') }}"></script>

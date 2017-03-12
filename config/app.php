@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Kalotsavam 2K17 ',
+    'name' => 'Amrita Kalotsavam 2K17 ',
 
     /*
     |--------------------------------------------------------------------------

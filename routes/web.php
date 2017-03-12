@@ -39,3 +39,6 @@ Route::post('/upload','HomeController@upload');
 Route::get('/upload','HomeController@viewUpload');
 Route::get('/admin/uploads','AdminController@viewupload');
 Route::get('/publish','AdminController@publishForm');
+Route::get('/announcements','AdminController@viewann');
+Route::post('/delann/{id}','AdminController@delann');
+Route::post('/addann','AdminController@announcements');
