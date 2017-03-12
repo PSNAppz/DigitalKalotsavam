@@ -23,8 +23,8 @@
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-xs-12 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
-                        <center><h1 style="color:#cd201f;"><i class="fa fa-history" aria-hidden="true"></i><br>Manage Logs</h1></center>
+                      <a href="/announcements" class="thumbnail" style="text-decoration:none;">
+                        <center><h1 style="color:#cd201f;"><i class="fa fa-newspaper-o" aria-hidden="true"></i></i><br>Announce</h1></center>
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
@@ -38,7 +38,7 @@
                       </a>
                     </div>
                     <div class="col-xs-12 col-md-3">
-                      <a href="#" class="thumbnail" style="text-decoration:none;">
+                      <a href="/publish" class="thumbnail" style="text-decoration:none;">
                         <center><h1 style="color:#cd201f;"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><br>Publish Score</h1></center>
                       </a>
                     </div>
@@ -100,9 +100,30 @@
         </div>
         <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
+                <div class="panel-heading">Announcements<span class="badge"></span></div>
+                <div class="panel-body">
+                  @foreach($an as $a)
+                  <div class="panel panel-default">
+                    <div class="panel-body"> {{$a->announcement}} |@if($a->type==2)
+                      <i class="fa fa-trophy" aria-hidden="true"></i>
+                        @else
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                        @endif
+                      <form action="/delann/{{$a->id}}" method="post">
+                         {{csrf_field()}}
+                         <input type="submit" value="Delete" class="btn btn-default" type="button">
+                          </form>
+                        </div>
+                  </div>
+                  @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-md-offset-0">
+            <div class="panel panel-default">
                 <div class="panel-heading">Score Board<span class="badge"></span></div>
                 <div class="panel-body">
-
+                <a class="btn btn-primary" href="/scoreboard">View Scoreboard</a>
                 </div>
             </div>
         </div>
