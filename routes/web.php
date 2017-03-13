@@ -16,11 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/scoreboard','AdminController@showScore');
+Route::get('/score','ScoreController@show');
 
 Auth::routes(['except' => ['register']]);
 Route::get('/register', function () {
     return view('welcome');
 });
+Route::post('/delfile/{id}','HomeController@removeupload');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/registrations/{sort?}','AdminController@registration')->name('adminreg');

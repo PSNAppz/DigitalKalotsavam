@@ -78,7 +78,7 @@ class AdminController extends Controller
       $anandamayi= PS::where('house','Anandamayi')->get();
       $chinmayi= PS::where('house','Chinmayi')->get();
       $ann= Ann::get();
-      $pie =Charts::create('pie', 'fusioncharts')
+      $pie =Charts::create('bar', 'fusioncharts')
       ->title('Score Analytics')
       ->labels(['Amritamayi', 'Jyothirmayi', 'Anandamayi','Chinmayi'])
       ->values([$amritamayi[0]->total,$jyothirmayi[0]->total,$anandamayi[0]->total,$chinmayi[0]->total])
@@ -686,6 +686,11 @@ class AdminController extends Controller
 
 
         return view('Admin.validate')->withResults($results)->withTrue($true)->withEvents($events);
+    }
+
+    public function updateScore(Request $req){
+        
+        return back();
     }
 
     /**
