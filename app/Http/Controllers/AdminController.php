@@ -688,6 +688,11 @@ class AdminController extends Controller
         return view('Admin.validate')->withResults($results)->withTrue($true)->withEvents($events);
     }
 
+    public function updateScore(Request $req){
+        
+        return back();
+    }
+
     /**
      * Display the specified resource.
      *

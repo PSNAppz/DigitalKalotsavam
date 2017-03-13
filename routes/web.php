@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/scoreboard','AdminController@showScore');
+Route::get('/score','ScoreController@show');
 
 Auth::routes(['except' => ['register']]);
 Route::get('/register', function () {
