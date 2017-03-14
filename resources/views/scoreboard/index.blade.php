@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+@extends('layouts.app1')
 
 </head>
 @section('content')
@@ -195,12 +195,12 @@ h2 strong {
 
 
 <div class="row">
-  <h1>SCORE <strong>Board</strong></h1>
+  <!--<h1>SCORE <strong>Board</strong></h1>-->
   <div class="col-md-6 col-xs-12">
 
     {!! $pie->render() !!}
   </div>
-  <div class="col-md-6 col-xs-12" style="margin-top:-140px" id="score">
+  <div class="col-md-6 col-xs-12" style="margin-top:0px" id="score">
   <div class="countdown"  style="margin-left: 90px;">
     <div class="bloc-time hours" data-init-value="24">
       <span class="count-title">Amritamayi</span>
@@ -391,7 +391,7 @@ h2 strong {
     </div>
   </div>
 </div>
-<div class="row" style="display:block">  
+<div class="row" style="display:block">
   <div class="col-md-4 col-md-offset-4 col-xs-12" style="margin-top:10px">
         <div class="panel panel-default">
           <div class="panel-heading">Winners</div>
