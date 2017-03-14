@@ -154,7 +154,7 @@ body, html {
 <div class="tab-content text-left container-fluid">
     <div id="f1" class="tab-pane active">
         <div class="panel panel-default">
-            <div class="panel-body slideanim" style="background-color:#fff;">
+            <div class="panel-body " style="background-color:#fff;">
                     <div style=" color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
                         <table class="table table-striped table-hover table-bordered " id="event_table" style="background-color: #fff;">
                         <tr>
@@ -328,37 +328,58 @@ body, html {
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                      <img src="{{ asset('images/galary1.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" style="max-height: 500px;" src="{{ asset('images/galary1.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                     </div>
                     <div class="item">
-                      <img src="{{ asset('images/galary2.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary2.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                     </div>
                    <div class="item">
-                      <img src="{{ asset('images/galary4.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary4.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                   </div>
-                    <!--<div class="item">
-                      <img src="{{ asset('images/galary5.jpg') }}" alt="..." height="100%" width="100%">
+                    <div class="item">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary5.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
-                  </div>-->
+                  </div>
+
+              <div class="item">
+                <img style="max-height: 500px;" src="{{ asset('images/galary7.jpg') }}" alt="..." height="100%" width="100%">
+                <div class="carousel-caption">
+                </div>
+                </div>
+                <div class="item">
+                    <img style="max-height: 500px;" src="{{ asset('images/galary8.jpg') }}" alt="..." height="100%" width="100%">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img style="max-height: 500px;" src="{{ asset('images/galary9.jpg') }}" alt="..." height="100%" width="100%">
+                    <div class="carousel-caption">
+                    </div>
+                    </div>
                     <div class="item">
-                      <img src="{{ asset('images/galary8.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary10.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                     </div>
                     <div class="item">
-                      <img src="{{ asset('images/galary10.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary11.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                     </div>
                     <div class="item">
-                      <img src="{{ asset('images/galary11.jpg') }}" alt="..." height="100%" width="100%">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary12.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary13.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
                       </div>
                     </div>
