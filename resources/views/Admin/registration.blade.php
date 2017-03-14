@@ -445,12 +445,9 @@
                           <option value="face_painting">Face painting</option>
                           <option value="rangoli">Rangoli</option>
                           <option value="clay_modeling">Clay modeling</option>
-<<<<<<< HEAD
                         </select>
-=======
 
                       </select>
->>>>>>> origin/master
                     </form>
                     <br>
                     @if($count)<h4> Total Participants for {{$name}} : {{$count}}</h4>@endif

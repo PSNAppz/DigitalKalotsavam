@@ -33,4 +33,20 @@ class ScoreController extends Controller
       ->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)
       ->withChinmayi($chinmayi)->withPie($pie)->withAnn($ann);
     }
+     /**
+     * Show the Public Score Board
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mob(){
+      $amritamayi = PS::where('house','Amritamayi')->get();
+      $jyothirmayi= PS::where('house','Jyothirmayi')->get();
+      $anandamayi= PS::where('house','Anandamayi')->get();
+      $chinmayi= PS::where('house','Chinmayi')->get();
+            $ann= Ann::get();
+      return view('scoreboard.mob')->withAnn($ann)->withAmritamayi($amritamayi)
+      ->withJyothirmayi($jyothirmayi)->withAnandamayi($anandamayi)
+      ->withChinmayi($chinmayi);
+    }
+
 }

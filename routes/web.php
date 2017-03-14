@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/mob','ScoreController@mob');
 Route::get('/scoreboard','AdminController@showScore');
 Route::get('/score','ScoreController@show');
 
