@@ -337,6 +337,11 @@ body, html {
                       <div class="carousel-caption">
                       </div>
                     </div>
+                    <div class="item">
+                      <img style="max-height: 500px;" src="{{ asset('images/galary3.jpg') }}" alt="..." height="100%" width="100%">
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
                    <div class="item">
                       <img style="max-height: 500px;" src="{{ asset('images/galary4.jpg') }}" alt="..." height="100%" width="100%">
                       <div class="carousel-caption">
