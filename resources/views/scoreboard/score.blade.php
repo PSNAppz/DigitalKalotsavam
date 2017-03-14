@@ -192,6 +192,7 @@ h2 strong {
 
 
 <div class="row" style="margin-left:0px;margin-right:0px;">
+<h1 style="margin-bottom:-10px">AMRITA <strong>Kalotsavam</strong> 2K17</h1>
   <div class="col-md-6">
   <div class="countdown" >
     <div class="bloc-time hours" data-init-value="24">
