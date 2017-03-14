@@ -1,11 +1,13 @@
 
-@extends('layouts.app')
+@extends('layouts.app1')
 
 </head>
 @section('content')
 <style>
 body {
   background-color: #f2f1ed;
+  width: 100%;
+  height: 100%;
 }
 
 .wrap {
@@ -181,21 +183,19 @@ h2 strong {
   margin: auto;
 }
 
+.team {
+  color: #de4848;
+}
 </style>
 
 {!! Charts::assets() !!}
 
 
 <div class="row" style="margin-left:0px;margin-right:0px;">
-  <h1>SCORE <strong>Board</strong></h1>
-  <div class="col-md-3" style="margin-left: 50px; margin-top:100px;">
-
-    {!! $pie->render() !!}
-  </div>
-  <div class="col-md-6 col-md-offset-2">
+  <div class="col-md-6">
   <div class="countdown" >
     <div class="bloc-time hours" data-init-value="24">
-      <span class="count-title">Amritamayi</span>
+      <span class="count-title team" style="color: #900000;">Amritamayi</span>
 
       <div class="figure hours hours-1">
         <span class="top">{{$amritamayi[0]->fscore}}</span>
@@ -242,7 +242,7 @@ h2 strong {
   </div>
 
     <div class="bloc-time hours" data-init-value="24">
-      <span class="count-title">Jyothirmayi</span>
+      <span class="count-title team " style="color: #900000;">Jyothirmayi</span>
 
       <div class="figure hours hours-1">
         <span class="top">{{$jyothirmayi[0]->fscore}}</span>
@@ -289,7 +289,7 @@ h2 strong {
     </div>
 
     <div class="bloc-time min" data-init-value="0">
-      <span class="count-title">Anandamayi</span>
+      <span class="count-title team" style="color: #900000;">Anandamayi</span>
 
       <div class="figure min min-1">
         <span class="top">{{$anandamayi[0]->fscore}}</span>
@@ -337,7 +337,7 @@ h2 strong {
 
 
     <div class="bloc-time sec" data-init-value="0">
-      <span class="count-title">Chinmayi</span>
+      <span class="count-title team" style="color: #900000;">Chinmayi</span>
 
         <div class="figure sec sec-1">
         <span class="top">{{$chinmayi[0]->fscore}}</span>
@@ -383,6 +383,10 @@ h2 strong {
     </div>
   </div>
 </div>
+  <div class="col-md-3  col-md-offset-2" style="margin-left: 50px; margin-top:100px;">
+
+    {!! $pie->render() !!}
+  </div>
 </div>
 <br>
 <br>

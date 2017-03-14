@@ -25,7 +25,7 @@ class ScoreController extends Controller
       ->title('Score Analytics')
       ->labels(['Amritamayi', 'Jyothirmayi', 'Anandamayi','Chinmayi'])
       ->values([$amritamayi[0]->total,$jyothirmayi[0]->total,$anandamayi[0]->total,$chinmayi[0]->total])
-      ->dimensions(600,500)
+      ->dimensions(500,500)
       ->colors(['#00B0FF', '#F9A825','#EC407A','#8BC34A'])
       ->responsive(false);
 
