@@ -385,12 +385,12 @@ h2 strong {
 </div>
   <div class="col-md-3  col-md-offset-2" style="margin-left: 50px; margin-top:50px;">
     {!! $pie->render() !!}<br>
-
+<br><br>
   <div class="panel panel-default" style="width: 175%;
 height: 40%;
 margin-top: -60px;">
           <div class="panel-body" >
-              <b><marquee direction="up" style="height:100%; font-size:20px;">
+              <b><marquee direction="up" scrolldelay="100" style="height:100%; font-size:20px;">
                 @foreach($ann as $a)
                 @if($a->type==2)
                                    <div class="panel panel-default">
