@@ -21,11 +21,11 @@ class ScoreController extends Controller
       $anandamayi= PS::where('house','Anandamayi')->get();
       $chinmayi= PS::where('house','Chinmayi')->get();
       $ann= Ann::get();
-      $pie =Charts::create('bar', 'fusioncharts')
+      $pie =Charts::create('pie', 'fusioncharts')
       ->title('Score Analytics')
       ->labels(['Amritamayi', 'Jyothirmayi', 'Anandamayi','Chinmayi'])
       ->values([$amritamayi[0]->total,$jyothirmayi[0]->total,$anandamayi[0]->total,$chinmayi[0]->total])
-      ->dimensions(500,500)
+      ->dimensions(600,400)
       ->colors(['#00B0FF', '#F9A825','#EC407A','#8BC34A'])
       ->responsive(false);
 
