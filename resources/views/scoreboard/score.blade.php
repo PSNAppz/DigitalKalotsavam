@@ -383,9 +383,27 @@ h2 strong {
     </div>
   </div>
 </div>
-  <div class="col-md-3  col-md-offset-2" style="margin-left: 50px; margin-top:100px;">
+  <div class="col-md-3  col-md-offset-2" style="margin-left: 50px; margin-top:50px;">
+    {!! $pie->render() !!}<br>
 
-    {!! $pie->render() !!}
+  <div class="panel panel-default" style="width: 175%;
+height: 40%;
+margin-top: -60px;">
+          <div class="panel-body" >
+              <b><marquee direction="up" style="height:100%; font-size:20px;">
+                @foreach($ann as $a)
+                @if($a->type==2)
+                                   <div class="panel panel-default">
+                <div class="panel-body">
+                   <i class="fa fa-trophy" aria-hidden="true"></i>
+                     {{$a->announcement}}</div>
+                 </div>
+                 @endif
+                @endforeach
+                 </marquee></b>
+          </div>
+         </div>
+  </div>  
   </div>
 </div>
 <br>
